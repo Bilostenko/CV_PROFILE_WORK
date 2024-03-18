@@ -1,0 +1,30 @@
+.header {
+  margin-top: 32px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #1A1A1A;
+  padding: 2rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; 
+}
+
+.header__hero {
+  text-decoration: none;
+}
+
+.header__hero>span {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  color: var(--main);
+}
+
+.header__surname {
+  margin-right: 0.25rem;
+}
+
+.first__name {
+  font-weight: 700;
+}
