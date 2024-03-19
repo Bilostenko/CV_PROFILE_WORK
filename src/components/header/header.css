@@ -5,10 +5,10 @@
 .header__wrapper {
   display: flex;
   justify-content: flex-start;
-  background-color: #1A1A1A;
+  background-color: var(--background);
   padding: 2rem;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px; 
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius); 
 }
 
 .header__hero {
