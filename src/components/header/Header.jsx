@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container">
         <div className="header__wrapper">
           <a href="#" className='header__hero'>
-            <span className='header__surname'>Dmytro </span>
+            <span className='header__surname'>Dima </span>
             <span className='first__name'>BILOSTENKO</span>
           </a>
         </div>

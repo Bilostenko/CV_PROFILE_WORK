@@ -56,6 +56,7 @@
 }
 
 .hero_dynamic-info {
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
@@ -75,7 +76,7 @@
 .hero__social-personal {
   color: rgb(200 200 200);
   margin-bottom: 1rem;
-  font-size: var(--font);
+  font-size: 18px;
 }
 
 .text-white {
@@ -87,23 +88,46 @@
   border-radius: 20px;
 }
 
-.bn3 {
-  display: inline-block;
-  padding: 0.5em 1.7em;
-  margin: 0 0.1em 0.1em 0;
-  border: 0.16em solid rgb(255, 255, 255);
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
-  text-align: center;
-  transition: all 0.2s;
+.bn632-hover {
+  display: flex;
+  align-items: center;
+  width: 120px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 40px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  
 }
 
-.bn3:hover {
-  color: black;
-  background-color: rgb(255, 255, 255);
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn22 {
+  background-image: linear-gradient(
+    to right,
+    #68DF99,
+    #65B56D,
+    #02F243,
+    #52830A
+  );
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
