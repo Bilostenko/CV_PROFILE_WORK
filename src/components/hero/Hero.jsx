@@ -41,7 +41,7 @@ const Hero = () => {
                 </div>
               </div>
               {description}
-              <a href={require("../../assets/CV_Bilostenko.pdf")} download="your_resume.pdf">
+              <a href={require("../../assets/CV_Bilostenko.pdf")} download="Bilostenko.pdf">
                 <button className="bn632-hover bn22">
                   <img src={download} alt="Download" />
                   Resume
