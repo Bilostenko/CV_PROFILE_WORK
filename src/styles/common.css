@@ -19,4 +19,5 @@ body {
   /*(1720px + 30px * 2) */
   margin: 0 auto;
   padding: 0 30px;
+  background-color: var(--background);
 }

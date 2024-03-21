@@ -1,0 +1,56 @@
+.about__title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: -.025em;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: #55D983 1px 0 5px;
+}
+
+.about__title span {
+  color: #55D983;
+}
+
+.about__photo {
+  max-width: 300px;
+  max-height: 300px;
+  position: absolute;
+  top: -81px;
+  left: 55rem;
+  z-index: 1;
+}
+
+.about__photo>img {
+  border-radius: 78px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__title {
+  padding-top: 2rem;
+}
+
+.about__wrapper {
+  display: flex;
+  position: relative; /* Додайте позиціонування relative */
+  z-index: 0;
+} 
+
+.about__description {
+  background-color: #2C2C2C;
+  width: 63rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.about__desctiption-item {
+  font-size: 1.2rem;
+  line-height: 1.75;
+  color: rgb(200 200 200);
+  max-width: 44rem;
+}
+
+.about__desctiption-item {
+  list-style-type: disc;
+}

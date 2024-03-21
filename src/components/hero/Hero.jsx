@@ -2,14 +2,8 @@ import './hero.css'
 
 import React from 'react';
 import { herodescription, social } from '../../data/data';
-
-
 import download from '../../assets/icons/free-icon-internet-download-manager-13876813.png';
-
-// import workplace from '../../assets/image/hero-workplace.jpg';
-
 import Text from './type_animation/Text';
-
 const Hero = () => {
 
   const { workPlaceImg, name, description } = herodescription();

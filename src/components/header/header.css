@@ -1,11 +1,14 @@
 .header {
   margin-top: 32px;
 }
+.header__container{
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
 
 .header__wrapper {
   display: flex;
   justify-content: flex-start;
-  background-color: var(--background);
   padding: 2rem;
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius); 
