@@ -33,9 +33,10 @@
 
 .about__wrapper {
   display: flex;
-  position: relative; /* Додайте позиціонування relative */
+  position: relative;
+  /* Додайте позиціонування relative */
   z-index: 0;
-} 
+}
 
 .about__description {
   background-color: #2C2C2C;
@@ -53,4 +54,18 @@
 
 .about__desctiption-item {
   list-style-type: disc;
+}
+
+@media (max-width: 1170px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+
+  .about__description,
+  .about__photo {
+    position: relative;
+    margin-left: 0;
+    left: 0;
+    top: 0;
+  }
 }
