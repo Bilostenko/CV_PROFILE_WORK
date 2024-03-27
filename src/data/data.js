@@ -5,7 +5,10 @@ import personalPhoto from '../assets/image/hero_photo.jfif';
 import instagram from '../assets/icons/free-icon-instagram-1384089.png';
 import linkedin from '../assets/icons/free-icon-linkedin-618.png';
 import gitHub from '../assets/icons/free-icon-github-logo-25231.png';
+import gitHbStats from '../assets/icons/gitHub-stats.png';
 import facebook from '../assets/icons/free-icon-facebook-5968764.png';
+import codeWars from '../assets/icons/codewars-stats.png';
+import certificates from '../assets/icons/certificate-stats.png';
 
 /**
  * Hero section
@@ -41,3 +44,18 @@ export const social = () => {
     fb
   }
 }
+
+export const stats = () => {
+  
+  const gitHubStats = gitHbStats;
+  const codeWarsStats = codeWars;
+  const certificate = certificates;
+  
+
+  return {
+    gitHubStats,
+    codeWarsStats,
+    certificate
+  }
+}
+
