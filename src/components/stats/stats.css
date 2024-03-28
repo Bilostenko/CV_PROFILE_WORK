@@ -45,6 +45,11 @@
   font-size: 24px;
 }
 
-.stats__number{
+.stats__text {
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+.stats__number {
   padding-top: 10px;
 }
