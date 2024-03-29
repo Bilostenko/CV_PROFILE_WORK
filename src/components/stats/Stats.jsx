@@ -1,25 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './stats.css';
 import { stats } from '../../data/data';
-import GitHubRepositoriesCounter from '../../services/apiService';
+// import GitHubRepositoriesCounter from '../../services/GitHubService';
 
 const Stats = () => {
 
   const statsData = stats();
-  const [repositoriesCount, setRepositoriesCount] = useState(null);
+  // const [repositoriesCount, setRepositoriesCount] = useState(null);
 
-  useEffect(() => {
-    const fetchRepositoriesCount = async () => {
-      try {
-        const response = await GitHubRepositoriesCounter();
-        setRepositoriesCount(response);
-      } catch (error) {
-        console.error('Помилка при отриманні кількості репозиторіїв:', error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchRepositoriesCount = async () => {
+  //     try {
+  //       const response = await GitHubRepositoriesCounter();
+  //       setRepositoriesCount(response);
+  //     } catch (error) {
+  //       console.error('Помилка при отриманні кількості репозиторіїв:', error);
+  //     }
+  //   };
 
-    fetchRepositoriesCount();
-  }, []);
+  //   fetchRepositoriesCount();
+  // }, []);
 
   // ДОДАТИ СПІННЕР 
 
@@ -33,7 +33,7 @@ const Stats = () => {
             <img src={statsData.gitHubStats} alt="logo" />
           </div>
           <h3 className="stats__number">Repos on GitHub</h3>
-          <p className="stats__text">{repositoriesCount === null ? 'Loading...' : repositoriesCount}</p>
+          {/* <p className="stats__text">{repositoriesCount === null ? 'Loading...' : repositoriesCount}</p> */}
         </div>
         <div className="stats__item">
           <div className="stats__item-logo">
