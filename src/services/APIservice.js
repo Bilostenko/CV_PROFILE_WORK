@@ -10,9 +10,7 @@ const useApiService = () => {
   }
 
   const getCodeWarsCount = async () => {
-    const response = await request(`https://www.codewars.com/api/v1/users/${username}`);
-    const data = await response.json();
-    return data.honor;
+    return await request(`https://www.codewars.com/api/v1/users/${username}`);
   }
 
 
