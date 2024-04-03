@@ -26,6 +26,13 @@
   align-items: center;
   background-color: #2C2C2C;
   border-radius: 20px;
+  position: relative;
+}
+.stats__item>img{
+  position: absolute;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .stats__item-logo {

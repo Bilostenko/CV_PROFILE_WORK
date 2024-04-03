@@ -10,9 +10,15 @@ import facebook from '../assets/icons/free-icon-facebook-5968764.png';
 import codeWars from '../assets/icons/codewars-stats.png';
 import certificates from '../assets/icons/certificate-stats.png';
 
-/**
- * Hero section
- */
+import algorithmsJS from '../assets/certificate/algorithmsJS.png'
+import certificateJSEssential from '../assets/certificate/Certificate_JS_Essential.png';
+import certificateJSStarter from '../assets/certificate/Certificate_JS_starter.png';
+import certificateEnglish from '../assets/certificate/english-1.png';
+import itGeneration from '../assets/certificate/ITGeneration.jpg';
+import certificateReact from '../assets/certificate/react.png';
+import certificateResponsiveWeb from '../assets/certificate/responsiveWeb.png';
+import certificateGitUdemy from '../assets/certificate/Сertificate-Git.png';
+
 export const herodescription = () => {
   const workPlaceImg = workplace;
   const personalPhotoImg = personalPhoto;
@@ -46,11 +52,11 @@ export const social = () => {
 }
 
 export const stats = () => {
-  
+
   const gitHubStats = gitHbStats;
   const codeWarsStats = codeWars;
   const certificate = certificates;
-  
+
 
   return {
     gitHubStats,
@@ -59,3 +65,52 @@ export const stats = () => {
   }
 }
 
+export const certificatesList = () => {
+
+  const algorithms = algorithmsJS;
+  const essential = certificateJSEssential;
+  const starter = certificateJSStarter;
+  const english = certificateEnglish;
+  const generation = itGeneration;
+  const react = certificateReact;
+  const responsiveWeb = certificateResponsiveWeb;
+  const gitUdemy = certificateGitUdemy;
+
+
+  return {
+    certificateList: [
+      {
+        image: algorithms,
+        alt: 'algorithms'
+      },
+      {
+        image: essential,
+        alt: 'essential'
+      },
+      {
+        image: starter,
+        alt: 'starter'
+      },
+      {
+        image: english,
+        alt: 'english'
+      },
+      {
+        image: generation,
+        alt: 'generation'
+      },
+      {
+        image: react,
+        alt: 'react'
+      },
+      {
+        image: responsiveWeb,
+        alt: 'responsiveWeb'
+      },
+      {
+        image: gitUdemy,
+        alt: 'gitUdemy'
+      },
+    ]
+  }
+}
