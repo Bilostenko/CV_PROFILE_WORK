@@ -1,7 +1,7 @@
 import React from 'react';
 import workplace from '../assets/image/hero-workplace.jpg';
 import personalPhoto from '../assets/image/hero_photo.jfif';
-
+// SOCIAL
 import instagram from '../assets/icons/free-icon-instagram-1384089.png';
 import linkedin from '../assets/icons/free-icon-linkedin-618.png';
 import gitHub from '../assets/icons/free-icon-github-logo-25231.png';
@@ -9,7 +9,7 @@ import gitHbStats from '../assets/icons/gitHub-stats.png';
 import facebook from '../assets/icons/free-icon-facebook-5968764.png';
 import codeWars from '../assets/icons/codewars-stats.png';
 import certificates from '../assets/icons/certificate-stats.png';
-
+// CERTIFICATES
 import algorithmsJS from '../assets/certificate/algorithmsJS.png'
 import certificateJSEssential from '../assets/certificate/Certificate_JS_Essential.png';
 import certificateJSStarter from '../assets/certificate/Certificate_JS_starter.png';
@@ -18,6 +18,20 @@ import itGeneration from '../assets/certificate/ITGeneration.jpg';
 import certificateReact from '../assets/certificate/react.png';
 import certificateResponsiveWeb from '../assets/certificate/responsiveWeb.png';
 import certificateGitUdemy from '../assets/certificate/Сertificate-Git.png';
+// SKILLS
+import antdesignIcon from '../assets/icons/antdesign-icon.png';
+import apiIcon from '../assets/icons/api-icon.png';
+import cssIcon from '../assets/icons/css-icon.png';
+import htmlIcon from '../assets/icons/html-icon.png';
+import jsIcon from '../assets/icons/js-icon.png';
+import figmaIcon from '../assets/icons/figma-icon.png';
+import gitIcon from '../assets/icons/git-icon.png';
+import photoshopIcon from '../assets/icons/photoshop-icon.png';
+import reactIcon from '../assets/icons/react-icon.png';
+import reduxIcon from '../assets/icons/redux-icon.png';
+import sassIcon from '../assets/icons/sass-icon.png';
+
+
 
 export const herodescription = () => {
   const workPlaceImg = workplace;
@@ -57,7 +71,6 @@ export const stats = () => {
   const codeWarsStats = codeWars;
   const certificate = certificates;
 
-
   return {
     gitHubStats,
     codeWarsStats,
@@ -66,7 +79,6 @@ export const stats = () => {
 }
 
 export const certificatesList = () => {
-
   const algorithms = algorithmsJS;
   const essential = certificateJSEssential;
   const starter = certificateJSStarter;
@@ -75,7 +87,6 @@ export const certificatesList = () => {
   const react = certificateReact;
   const responsiveWeb = certificateResponsiveWeb;
   const gitUdemy = certificateGitUdemy;
-
 
   return {
     certificateList: [
@@ -111,6 +122,58 @@ export const certificatesList = () => {
         image: gitUdemy,
         alt: 'gitUdemy'
       },
+    ]
+  }
+}
+
+export const skillsList = () => {
+  const antdsn = antdesignIcon;
+  const api = apiIcon;
+  const css = cssIcon;
+  const html = htmlIcon;
+  const js = jsIcon;
+  const figma = figmaIcon;
+  const git = gitIcon;
+  const photoshop = photoshopIcon;
+  const react = reactIcon;
+  const redux = reduxIcon;
+  const sass = sassIcon;
+
+  return {
+    skillList: [
+      {
+        skill: antdsn,
+      },
+      {
+        skill: api,
+      },
+      {
+        skill: css,
+      },
+      {
+        skill: html,
+      },
+      {
+        skill: js,
+      },
+      {
+        skill: figma,
+      },
+      {
+        skill: git,
+      },
+      {
+        skill: photoshop,
+      },
+      {
+        skill: react,
+      },
+      {
+        skill: redux,
+      },
+      {
+        skill: sass,
+      }
     ]
   }
 }

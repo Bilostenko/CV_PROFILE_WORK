@@ -1,0 +1,16 @@
+.skills__wrapper{
+  margin-top: 2.5rem;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.skills__list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} 
+
+.skills-item {
+  position: relative;
+}
