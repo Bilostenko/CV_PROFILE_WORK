@@ -1,6 +1,7 @@
 import About from "./components/about/About";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
+import Mywork from "./components/myWork/Mywork";
 import Skills from "./components/skills/Skills";
 import Stats from "./components/stats/Stats";
 
@@ -12,6 +13,7 @@ function App() {
       < About />
       < Stats />
       < Skills />
+      < Mywork />
     </div>
   );
 }

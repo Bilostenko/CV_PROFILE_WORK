@@ -31,6 +31,29 @@ import reactIcon from '../assets/icons/react-icon.png';
 import reduxIcon from '../assets/icons/redux-icon.png';
 import sassIcon from '../assets/icons/sass-icon.png';
 
+// WORKLIST
+import calculator from '../assets/image/worklist/calculator.png';
+import marvel from '../assets/image/worklist/marvel.png';
+import pizza from '../assets/image/worklist/pizza.png';
+import chuk from '../assets/image/worklist/chuk_norris.png';
+import shopping from '../assets/image/worklist/shopping.png';
+import katrik from '../assets/image/worklist/katrik.png';
+import reactState from '../assets/image/worklist/react-state.png';
+import courseAdversting from '../assets/image/worklist/course-adversting.png';
+import forms from '../assets/image/worklist/form-input.png';
+import intakeForms from '../assets/image/worklist/intake-forms.png';
+import cutspace from '../assets/image/worklist/cutspace.png';
+import bike from '../assets/image/worklist/bike-landing.png';
+import clubweb from '../assets/image/worklist/clubweb.png';
+import barber from '../assets/image/worklist/barber.png';
+import trevland from '../assets/image/worklist/trevland.png';
+import kettles from '../assets/image/worklist/kettles.png';
+import accounter from '../assets/image/worklist/accounter.png';
+import taskManager from '../assets/image/worklist/useReducer.png';
+import reactFormic from '../assets/image/worklist/react-formic.png';
+import keyCode from '../assets/image/worklist/keyCode.png';
+import pizzaConstructor from '../assets/image/worklist/pizza-constructor.png';
+import japanLanding from '../assets/image/worklist/japan-landing.png';
 
 
 export const herodescription = () => {
@@ -177,3 +200,190 @@ export const skillsList = () => {
     ]
   }
 }
+
+export const myWorkList = () => {
+  return {
+    worklist: {
+      new: [
+        {
+          name: 'Calculator',
+          linkPage: 'https://github.com/Bilostenko/calculator/tree/master',
+          linkRepo: 'https://bilostenko.github.io/calculator/',
+          tools: 'HTML, CSS, JavaScript',
+          image: calculator,
+          description: 'Calculator written in Javascript'
+        },
+        {
+          name: 'Marvel Characters',
+          linkPage: 'https://marvel-character-gamma.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/marvel-character/tree/main',
+          tools: 'HTML, SCSS, JavaScript, React, API',
+          image: marvel,
+          description: 'Find your marvel hero and check his biography.'
+        },
+        {
+          name: 'Pizza Website',
+          linkPage: 'https://pizza-website-tau.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/pizza-website',
+          tools: 'HTML, SCSS, JavaScript',
+          image: pizza,
+          description: 'Just simple Javascript. Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.'
+        },
+        {
+          name: 'Chuk Norris Joke Collection',
+          linkPage: 'https://bilostenko.github.io/Chuk-Norris-Joke-API/',
+          linkRepo: 'https://github.com/Bilostenko/Chuk-Norris-Joke-API',
+          tools: 'HTML, SCSS, JavaScript, API',
+          image: chuk,
+          description: 'Welcome to the Chuck Norris Joke Collection! Press the button and brace yourself for a laugh harder than Chuck`s roundhouse kick.'
+        },
+        {
+          name: 'Shopping lannding page',
+          linkPage: 'https://shopping-website-ffq6.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/Shopping-website/tree/master',
+          tools: 'HTML, SCSS, JavaScript, React, GSAP',
+          image: shopping,
+          description: 'Simple landing page build on React and GSAP animation library.'
+        },
+      ],
+      old: [
+        {
+          name: 'Karkik landing page',
+          linkPage: 'https://bilostenko.github.io/kartik-bansal-cv/ ',
+          linkRepo: 'https://github.com/Bilostenko/kartik-bansal-cv',
+          tools: 'HTML, CSS',
+          image: katrik,
+          description: 'Simple landing page. Just JS and CSS'
+        },
+        {
+          name: 'React state task',
+          linkPage: 'https://react-state-task.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/react_state_task',
+          tools: 'HTML, CSS, Javascript, React',
+          image: reactState,
+          description: 'Beginners projects for react state management'
+        },
+        {
+          name: 'Course adversing landing page',
+          linkPage: 'https://bilostenko.github.io/layout-course-advertising/',
+          linkRepo: 'https://github.com/Bilostenko/layout-course-advertising',
+          tools: 'HTML, CSS, Bootstrap',
+          image: courseAdversting,
+          description: 'Landing page with Bootstrap'
+        },
+        {
+          name: 'Work with inputs, radio btns, checkboxes and etс.',
+          linkPage: 'https://bilostenko.github.io/survey_form/ ',
+          linkRepo: 'https://github.com/Bilostenko/survey_form',
+          tools: 'HTML, CSS',
+          image: forms,
+          description: 'Learn how to use the forms'
+        },
+        {
+          name: 'Cutspace landing page.',
+          linkPage: 'https://bilostenko.github.io/Landing-Cutspace/',
+          linkRepo: 'https://github.com/Bilostenko/Landing-Cutspace',
+          tools: 'HTML, SCSS, Javscript',
+          image: cutspace,
+          description: 'Simple landing page build on HTML, SCSS and JS'
+        },
+        {
+          name: 'Bikraft landing page.',
+          linkPage: 'https://bilostenko.github.io/input-forms/',
+          linkRepo: 'https://github.com/Bilostenko/input-forms',
+          tools: 'HTML, CSS',
+          image: bike,
+          description: 'Simple landing page build on HTML, SCSS'
+        },
+        {
+          name: 'Work with inputs, radio btns, checkboxes and etс. Vol.2',
+          linkPage: 'https://bilostenko.github.io/input-forms/',
+          linkRepo: 'https://github.com/Bilostenko/input-forms',
+          tools: 'HTML, CSS',
+          image: intakeForms,
+          description: 'Simple landing page build on HTML, SCSS'
+        },
+        {
+          name: 'ClubWeb landing page.',
+          linkPage: 'https://bilostenko.github.io/clubweb/',
+          linkRepo: 'https://github.com/Bilostenko/clubweb',
+          tools: 'HTML, CSS',
+          image: clubweb,
+          description: 'Simple landing page build on HTML, SCSS'
+        },
+        {
+          name: 'Barber landing page.',
+          linkPage: 'https://bilostenko.github.io/Dupper-Buly/',
+          linkRepo: 'https://github.com/Bilostenko/Dupper-Buly',
+          tools: 'HTML, CSS, Javascript',
+          image: barber,
+          description: 'Simple landing page build on HTML, SCSS and JS with animation'
+        },
+        {
+          name: 'Trevland landing page.',
+          linkPage: 'https://bilostenko.github.io/traveland/',
+          linkRepo: 'https://github.com/Bilostenko/traveland',
+          tools: 'HTML, SCSS',
+          image: trevland,
+          description: 'Simple landing page build on HTML and SCSS.'
+        },
+        {
+          name: 'Kettles landing page.',
+          linkPage: 'https://bilostenko.github.io/kettles/',
+          linkRepo: 'https://github.com/Bilostenko/kettles',
+          tools: 'HTML, SCSS, Javascript',
+          image: kettles,
+          description: 'Simple landing page build on HTML, SCSS and JS with animation'
+        },
+        {
+          name: 'Accounter landing page.',
+          linkPage: 'https://bilostenko.github.io/accounter/',
+          linkRepo: 'https://github.com/Bilostenko/accounter',
+          tools: 'HTML, CSS, Javascript',
+          image: accounter,
+          description: 'Simple landing page build on HTML, SCSS and JS'
+        },
+        {
+          name: 'React task manager.',
+          linkPage: 'https://task-manager-usereducer.vercel.app/ ',
+          linkRepo: 'https://github.com/Bilostenko/task_manager_usereducer',
+          tools: 'HTML, CSS, Javascript, React',
+          image: taskManager,
+          description: 'Task Manager built on React and useReducer hooks.'
+        },
+        {
+          name: 'React forms.',
+          linkPage: 'https://react-formic-yup.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/react-formic-yup',
+          tools: 'HTML, SCSS, Javascript, React',
+          image: reactFormic,
+          description: 'Simple form built on React.'
+        },
+        {
+          name: 'JavaScript keyCode',
+          linkPage: 'https://bilostenko.github.io/keyCode/',
+          linkRepo: 'https://github.com/Bilostenko/keyCode?tab=readme-ov-file',
+          tools: 'HTML, SCSS, Javascript',
+          image: keyCode,
+          description: 'Press the keypad button and you will see its code.'
+        },
+        {
+          name: 'Pizza constructor',
+          linkPage: 'https://pizza-sigma-ten.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/pizza',
+          tools: 'HTML, SCSS, Javascript',
+          image: pizzaConstructor,
+          description: 'Pizza constructor with drug & drop.'
+        },
+        {
+          name: 'Japan landing page',
+          linkPage: 'https://bilostenko.github.io/Japan_landing_page/',
+          linkRepo: 'https://github.com/Bilostenko/Japan_landing_page',
+          tools: 'HTML, SCSS, Javascript',
+          image: japanLanding,
+          description: 'Landing page about Japan.'
+        },
+      ]
+    }
+  };
+};
