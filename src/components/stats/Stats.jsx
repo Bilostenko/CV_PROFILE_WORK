@@ -47,52 +47,54 @@ const Stats = () => {
   const spinner = loading ? <Spinner /> : null;
 
   return (
-    <div className="container">
-      <h2 className="stats__title"><span>Sta</span>ts</h2>
+    <section className="stats">
+      <div className="container">
+        <h2 className="stats__title"><span>Sta</span>ts</h2>
 
-      <div className="stats__wrapper">
-        <div className="stats__item">
-          <div className="stats__item-logo">
-            <img src={statsData.certificate} alt="logo" />
+        <div className="stats__wrapper">
+          <div className="stats__item">
+            <div className="stats__item-logo">
+              <img src={statsData.certificate} alt="logo" />
+            </div>
+            <h3 className="stats__number">Certificates (clickable)</h3>
+            <Tooltip
+              className='tooltip'
+              placement="right"
+              title={<Certificates
+              />}>
+              <img src={question} alt="icon" />
+            </Tooltip>
+            <p className="stats__text">11</p>
           </div>
-          <h3 className="stats__number">Certificates (clickable)</h3>
-          <Tooltip
-            className='tooltip'
-            placement="right"
-            title={<Certificates
-            />}>
-            <img src={question} alt="icon" />
-          </Tooltip>
-          <p className="stats__text">11</p>
-        </div>
-        <div className="stats__item">
-          <div className="stats__item-logo">
-            <img src={statsData.gitHubStats} alt="logo" />
+          <div className="stats__item">
+            <div className="stats__item-logo">
+              <img src={statsData.gitHubStats} alt="logo" />
+            </div>
+            <h3 className="stats__number">Repos on GitHub</h3>
+            <p className="stats__text">
+              {errorMessage}
+              {spinner}
+              {gitHubCount ? gitHubCount.length : 'Loading...'}
+            </p>
           </div>
-          <h3 className="stats__number">Repos on GitHub</h3>
-          <p className="stats__text">
-            {errorMessage}
-            {spinner}
-            {gitHubCount ? gitHubCount.length : 'Loading...'}
-          </p>
-        </div>
-        <div className="stats__item">
-          <div className="stats__item-logo">
-            <img src={statsData.codeWarsStats} alt="logo" />
+          <div className="stats__item">
+            <div className="stats__item-logo">
+              <img src={statsData.codeWarsStats} alt="logo" />
+            </div>
+            <h3 className="stats__number">Score on Codewars</h3>
+            <p className="stats__text">
+              {errorMessage}
+              {spinner}
+              {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)}
+            </p>
+            <p className="stats__number">Rank:{' '}
+              {errorMessage}
+              {spinner}
+              {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}</p>
           </div>
-          <h3 className="stats__number">Score on Codewars</h3>
-          <p className="stats__text">
-            {errorMessage}
-            {spinner}
-            {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)}
-          </p>
-          <p className="stats__number">Rank:{' '}
-            {errorMessage}
-            {spinner}
-            {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
