@@ -81,6 +81,7 @@
 .text-white {
   color: var(--main);
   font-weight: 900;
+  font-weight: 600;
 }
 
 .hero__workplace img {

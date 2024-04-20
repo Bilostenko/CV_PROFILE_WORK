@@ -42,7 +42,7 @@
   line-height: 25px ;
 }
 .open-button{
-  background-color: #55D983;
+  background-color: black;
 }
 
 .ant-drawer-title{
@@ -54,4 +54,5 @@
 }
 .open-button>span{
   font-size: 15px;
+  color: #55D983;
 }

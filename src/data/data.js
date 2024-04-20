@@ -227,7 +227,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/pizza-website',
           tools: 'HTML, SCSS, JavaScript',
           image: pizza,
-          description: 'Just simple Javascript. Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.'
+          description: 'Just Javascript and nothing else =) Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.'
         },
         {
           name: 'Chuk Norris Joke Collection',

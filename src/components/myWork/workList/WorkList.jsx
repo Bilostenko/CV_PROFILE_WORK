@@ -4,8 +4,8 @@ import { myWorkList } from '../../../data/data';
 import { Button, Drawer, theme } from 'antd';
 
 const WorkList = () => {
-  const { token } = theme.useToken();
-  const workList = myWorkList().worklist.new;
+  const workListNew = myWorkList().worklist.new;
+  const workListOld = myWorkList().worklist.old;
   const [openDrawerIndex, setOpenDrawerIndex] = useState(null);
 
   const showDrawer = (index) => {
@@ -19,7 +19,7 @@ const WorkList = () => {
   return (
     <>
       <ul className="work__list">
-        {workList.map((item, index) => (
+        {workListNew.map((item, index) => (
           <li className="work__item" key={index}>
             <div className="drawer-container">
               <div className="image-container">

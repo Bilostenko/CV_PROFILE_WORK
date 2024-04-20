@@ -4,7 +4,6 @@
   line-height: 2.25rem;
   letter-spacing: -.025em;
   font-weight: 800;
-  margin-bottom: 1rem;
   text-shadow: #55D983 1px 0 5px;
 }
 
@@ -48,7 +47,7 @@
 
 .stats__number,
 .stats__text {
-  font-weight: 900;
+  font-weight: 400;
   font-size: 24px;
 }
 
