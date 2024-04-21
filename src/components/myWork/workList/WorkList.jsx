@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './worklist.css';
 import { myWorkList } from '../../../data/data';
-import { Button, Drawer, theme } from 'antd';
+import { Button, Drawer } from 'antd';
+import { useSelector } from 'react-redux';
 
 const WorkList = () => {
+  const selectedList = useSelector(state => state.project.selectedList);
   const workListNew = myWorkList().worklist.new;
   const workListOld = myWorkList().worklist.old;
   const [openDrawerIndex, setOpenDrawerIndex] = useState(null);
@@ -15,11 +17,12 @@ const WorkList = () => {
   const onClose = () => {
     setOpenDrawerIndex(null);
   };
+  const workList = selectedList === 'new' ? workListNew : workListOld;
 
   return (
     <>
       <ul className="work__list">
-        {workListNew.map((item, index) => (
+        {workList.map((item, index) => (
           <li className="work__item" key={index}>
             <div className="drawer-container">
               <div className="image-container">
