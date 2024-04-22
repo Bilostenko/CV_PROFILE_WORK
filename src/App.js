@@ -1,4 +1,5 @@
 import About from "./components/about/About";
+import Experience from "./components/experience/Experience";
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Mywork from "./components/myWork/Mywork";
@@ -14,6 +15,7 @@ function App() {
       < Stats />
       < Skills />
       < Mywork />
+      < Experience />
     </div>
   );
 }

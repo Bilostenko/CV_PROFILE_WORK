@@ -288,9 +288,9 @@ export const myWorkList = () => {
           description: 'Simple landing page build on HTML, SCSS and JS'
         },
         {
-          name: 'Bikraft landing page.',
-          linkPage: 'https://bilostenko.github.io/input-forms/',
-          linkRepo: 'https://github.com/Bilostenko/input-forms',
+          name: 'Bikсraft landing page.',
+          linkPage: 'https://bilostenko.github.io/bike-landing/',
+          linkRepo: 'https://github.com/Bilostenko/bike-landing',
           tools: 'HTML, CSS',
           image: bike,
           description: 'Simple landing page build on HTML, SCSS'
@@ -387,3 +387,63 @@ export const myWorkList = () => {
     }
   };
 };
+
+export const education = () => {
+
+  return {
+    education: [
+      {
+        date: '2007 - 2011',
+        name: 'National University of Internal Affairs',
+        description: 'Bachelor`s degree in law',
+      },
+      {
+        date: '01.11.2022 - 01.05.2023',
+        name: 'IT Generation:',
+        description: {
+          des1: 'Front-End development',
+        }
+      },
+      {
+        date: '',
+        name: 'FreeCodecamp:',
+        description: {
+          des1: 'Responsive Web Design (certificate may be provided upon request)',
+          des2: 'JavaScript Algorithms and Data Structures'
+        }
+      },
+      {
+        date: '',
+        name: 'Prometheus: Основи Web UI розробки 2020',
+        description: {
+          des1: '',
+          des2: ''
+        }
+      },
+      {
+        date: '',
+        name: 'Udemy:',
+        description: {
+          des1: 'Git: Complete course for beginners and more (certificate may be provided upon request)',
+          des2: 'The Complete JavaScript course + React Course',
+          des3: 'Basi CSS and HTML',
+        }
+      },
+      {
+        date: '',
+        name: 'CyberBionic systematics:',
+        description: {
+          des1: 'course "JavaScript starter" (certificate may be provided upon request)',
+          des2: 'course "JavaScript essential" (certificate may be provided upon request)'
+        }
+      },
+    ],
+    work: [
+      {
+        date: '',
+        name: 'National Police of Ukraine',
+        description: 'Senior inspector in special assigment of the International Police Cooperation Department (Interpol)',
+      },
+    ]
+  }
+}
