@@ -55,6 +55,9 @@ import keyCode from '../assets/image/worklist/keyCode.png';
 import pizzaConstructor from '../assets/image/worklist/pizza-constructor.png';
 import japanLanding from '../assets/image/worklist/japan-landing.png';
 
+// FISH
+
+
 
 export const herodescription = () => {
   const workPlaceImg = workplace;
@@ -388,14 +391,16 @@ export const myWorkList = () => {
   };
 };
 
-export const education = () => {
+export const myExperience = () => {
 
   return {
     education: [
       {
         date: '2007 - 2011',
         name: 'National University of Internal Affairs',
-        description: 'Bachelor`s degree in law',
+        description: {
+          des1: 'Bachelor`s degree in law',
+        }
       },
       {
         date: '01.11.2022 - 01.05.2023',
@@ -426,7 +431,7 @@ export const education = () => {
         description: {
           des1: 'Git: Complete course for beginners and more (certificate may be provided upon request)',
           des2: 'The Complete JavaScript course + React Course',
-          des3: 'Basi CSS and HTML',
+          des3: 'Basic CSS and HTML',
         }
       },
       {
