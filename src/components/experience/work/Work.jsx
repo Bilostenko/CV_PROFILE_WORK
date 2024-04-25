@@ -1,11 +1,20 @@
 import './work.css'
 import { myExperience } from '../../../data/data';
-import Mrfish from '../MrFish';
+import gsap from 'gsap';
+import React, {useEffect, useRef} from  'react';
+// import Mrfish from '../MrFish';
 
 const Work = () => {
+  const expRef = useRef(null);
+
+  useEffect (() => {
+    const tl = gsap.timeline();
+    tl.fromTo(expRef.current, { x: +100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
+  }, [])
+
   return (
     <div className="experience__work">
-      <h2 className="experience__work-header"><span>Exp</span>erience</h2>
+      <h2 className="experience__work-header" ref={expRef}><span>Exp</span>erience</h2>
       <ul className="experience__work-list">
         {myExperience().work.map((item, index) => (
           <li className="work__list-item" key={index}>
@@ -25,7 +34,7 @@ const Work = () => {
           </li>
         ))}
       </ul>
-      < Mrfish />
+      {/* < Mrfish /> */}
     </div>
   );
 }

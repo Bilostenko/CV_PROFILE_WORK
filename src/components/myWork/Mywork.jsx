@@ -1,26 +1,36 @@
 import './Mywork.css'
+import React, { useEffect, useRef } from 'react';
 import WorkList from './workList/WorkList';
 import { useDispatch } from 'react-redux';
 import { newProjects, oldProjects } from '../../redux/actions';
+import gsap from 'gsap';
 
 const Mywork = () => {
+
+  const worksRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(worksRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
+  }, [])
+
   const dispatch = useDispatch()
-const handleNewProjects = (event) => {
-  event.preventDefault();
-  dispatch(newProjects())
-}
-const handleOldProjects = (event) => {
-  event.preventDefault();
-  dispatch(oldProjects())
-}
+  const handleNewProjects = (event) => {
+    event.preventDefault();
+    dispatch(newProjects())
+  }
+  const handleOldProjects = (event) => {
+    event.preventDefault();
+    dispatch(oldProjects())
+  }
 
   return (
     <section className="work">
       <div className="container">
-        <h2 className="stats__title work__title"><span>My</span> works</h2>
+        <h2 className="stats__title work__title" ref={worksRef}><span>My</span> works</h2>
         <div className="work__btns-wrapper">
-        <a href="/" class="bn5" onClick={handleNewProjects}>New </a>
-        <a href="/" class="bn5" onClick={handleOldProjects}>Old</a>
+          <a href="/" class="bn5" onClick={handleNewProjects}>New </a>
+          <a href="/" class="bn5" onClick={handleOldProjects}>Old</a>
         </div>
         < WorkList />
       </div>

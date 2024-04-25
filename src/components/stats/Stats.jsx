@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './stats.css';
 import { stats } from '../../data/data';
 import useApiService from '../../services/APIservice';
-
+import gsap from 'gsap';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Spinner from '../spinner/Spinner';
 import question from '../../assets/icons/question.png'
@@ -12,13 +12,16 @@ const Stats = () => {
 
   const statsData = stats();
   const { error, loading, getRepoCount, getCodeWarsCount, clearError } = useApiService()
-
   const [gitHubCount, setgitHubCount] = useState(null);
   const [codewarsCountScore, setcodewarsCountScore] = useState(null);
   const [codewarsCountRank, setcodewarsCountRank] = useState(null);
+  const tl = gsap.timeline();
+  const statsRef = useRef(null)
 
   useEffect(() => {
     updateGitHubRepos()
+
+    tl.fromTo(statsRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 }, [])
   }, [])
 
   const updateGitHubRepos = () => {
@@ -49,7 +52,7 @@ const Stats = () => {
   return (
     <section className="stats">
       <div className="container">
-        <h2 className="stats__title"><span>Sta</span>ts</h2>
+        <h2 className="stats__title" ref={statsRef}><span>Sta</span>ts</h2>
 
         <div className="stats__wrapper">
           <div className="stats__item">

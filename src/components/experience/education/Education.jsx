@@ -1,10 +1,20 @@
 import './education.css'
 import { myExperience } from '../../../data/data';
+import gsap from 'gsap';
+import React, { useEffect, useRef } from 'react';
 
 const Education = () => {
+
+  const educationRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(educationRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
+  }, [])
+
   return (
     <div className="experience__education">
-      <h2 className="experience__education-header"><span>Ed</span>ucation</h2>
+      <h2 className="experience__education-header" ref={educationRef}><span>Ed</span>ucation</h2>
       <ul className="experience__education-list">
         {myExperience().education.map((item, index) => (
           <li className="education__list-item" key={index}>
