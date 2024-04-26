@@ -5,7 +5,7 @@ import { herodescription, social } from '../../data/data';
 import download from '../../assets/icons/free-icon-internet-download-manager-13876813.png';
 import Text from './type_animation/Text';
 import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Hero = () => {
 
@@ -13,37 +13,55 @@ const Hero = () => {
   const { inst, lnkdn, gitHb, fb } = social();
   const nameRef = useRef(null);
   const descRef = useRef(null);
+  const leftBlockRef = useRef(null);
+  const rightBlockRef = useRef(null);
   const containerRef = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(nameRef.current, { y: -50, opacity: 0 }, { y: 0, opacity: 1, duration: 2 })
       .fromTo(descRef.current, { y: +50, opacity: 0 }, { y: 0, opacity: 1, duration: 2 }, 0.5);
+  }, []);
 
-    // Виправлений код для ScrollTrigger
-    // gsap.to(containerRef.current, {
-    //   scrollTrigger: {
-    //     trigger: containerRef.current,
-    //     markers: true,
-    //     start: 'top top',
-    //     scrub: true
-    //   },
-    //   yPercent: -80, // Змінено напрямок прокрутки на зменшення (від'ємне значення)
-    //   scale: 1, // Змінено масштаб на 1
-    //   xPercent: 0,
-    //   opacity: 1,
-    //   duration: 2
-    // });
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(rightBlockRef.current, {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top top',
+        scrub: true
+      },
+      yPercent: 80,
+      scale: 0.5,
+      xPercent: -80,
+      opacity: 0,
+      duration: 1
+    })
+  }, []);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(leftBlockRef.current, {
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top top',
+        scrub: true
+      },
+      yPercent: 80,
+      scale: 0.5,
+      xPercent: 80,
+      opacity: 0,
+      duration: 1
+    });
   }, []);
 
   return (
     <section className="hero">
-      <div className="container" ref={containerRef}>
-        <div className="hero__wrapper">
+      <div className="container">
+        <div className="hero__wrapper" ref={containerRef}>
           <div className="hero__workplace">
-            <img src={workPlaceImg} alt="computer" />
+            <img src={workPlaceImg} alt="computer" ref={leftBlockRef} />
           </div>
-          <div className="hero__description">
+          <div className="hero__description" ref={rightBlockRef}>
             <div className="hero_dynamic-info">
               {'<'}<span style={{ color: '#32A10F' }}>code</span>{'>'} <span style={{ fontWeight: 900 }}>I use&nbsp;</span>
               < Text />
