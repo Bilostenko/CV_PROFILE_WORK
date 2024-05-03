@@ -1,19 +1,27 @@
 import './work.css'
 import { myExperience } from '../../../data/data';
 import gsap from 'gsap';
-import React, {useEffect, useRef} from  'react';
-// import Mrfish from '../MrFish';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useEffect, useRef } from 'react';
 
 const Work = () => {
   const expRef = useRef(null);
+  const workSectionRef = useRef(null);
 
-  useEffect (() => {
-    const tl = gsap.timeline();
-    tl.fromTo(expRef.current, { x: +100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
-  }, [])
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: workSectionRef.current,
+        start: "top 90%",
+        end: "bottom 20%",
+      }
+    });
+    tl.fromTo(workSectionRef.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 2 });
+  }, []);
 
   return (
-    <div className="experience__work">
+    <div className="experience__work" ref={workSectionRef}>
       <h2 className="experience__work-header" ref={expRef}><span>Exp</span>erience</h2>
       <ul className="experience__work-list">
         {myExperience().work.map((item, index) => (
@@ -34,7 +42,6 @@ const Work = () => {
           </li>
         ))}
       </ul>
-      {/* < Mrfish /> */}
     </div>
   );
 }

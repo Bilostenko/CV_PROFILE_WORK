@@ -4,13 +4,22 @@ import WorkList from './workList/WorkList';
 import { useDispatch } from 'react-redux';
 import { newProjects, oldProjects } from '../../redux/actions';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Mywork = () => {
 
   const worksRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: worksRef.current,
+        start: "top 100%",
+        end: "bottom 20%",
+        scrub: true,
+      }
+    });
     tl.fromTo(worksRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
   }, [])
 

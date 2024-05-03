@@ -8,6 +8,7 @@ import Spinner from '../spinner/Spinner';
 import question from '../../assets/icons/question.png'
 import { Tooltip } from 'antd';
 import Certificates from './certificate/Certificate';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Stats = () => {
 
   const statsData = stats();
@@ -17,12 +18,44 @@ const Stats = () => {
   const [codewarsCountRank, setcodewarsCountRank] = useState(null);
   const tl = gsap.timeline();
   const statsRef = useRef(null)
+  gsap.registerPlugin(ScrollTrigger);
+
+  const statsBox1Ref = useRef(null);
+  const statsBox2Ref = useRef(null);
+  const statsBox3Ref = useRef(null);
+
 
   useEffect(() => {
     updateGitHubRepos()
-
     tl.fromTo(statsRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 }, [])
   }, [])
+
+  const setupScrollAnimation = (ref, yOffset) => {
+    gsap.set(ref.current, { yPercent: yOffset });
+    gsap.to(ref.current, {
+      scrollTrigger: {
+        trigger: statsRef.current,
+        scrub: true,
+      },
+      yPercent: 0, // Кінцеве положення
+    });
+  };
+  
+  useEffect(() => {
+    setupScrollAnimation(statsBox1Ref, -40);
+  }, [statsBox1Ref]);
+  
+  useEffect(() => {
+    setupScrollAnimation(statsBox2Ref, 40);
+  }, [statsBox2Ref]);
+  
+  useEffect(() => {
+    setupScrollAnimation(statsBox3Ref, -40);
+  }, [statsBox3Ref]);
+  
+  
+  
+
 
   const updateGitHubRepos = () => {
     clearError()
@@ -55,8 +88,8 @@ const Stats = () => {
         <h2 className="stats__title" ref={statsRef}><span>Sta</span>ts</h2>
 
         <div className="stats__wrapper">
-          <div className="stats__item">
-            <div className="stats__item-logo">
+          <div className="stats__item" ref={statsBox1Ref}>
+            <div className="stats__item-logo" >
               <img src={statsData.certificate} alt="logo" />
             </div>
             <h3 className="stats__number">Certificates (clickable)</h3>
@@ -69,8 +102,8 @@ const Stats = () => {
             </Tooltip>
             <p className="stats__text">11</p>
           </div>
-          <div className="stats__item">
-            <div className="stats__item-logo">
+          <div className="stats__item" ref={statsBox2Ref}>
+            <div className="stats__item-logo" >
               <img src={statsData.gitHubStats} alt="logo" />
             </div>
             <h3 className="stats__number">Repos on GitHub</h3>
@@ -80,8 +113,8 @@ const Stats = () => {
               {gitHubCount ? gitHubCount.length : 'Loading...'}
             </p>
           </div>
-          <div className="stats__item">
-            <div className="stats__item-logo">
+          <div className="stats__item" ref={statsBox3Ref}>
+            <div className="stats__item-logo" >
               <img src={statsData.codeWarsStats} alt="logo" />
             </div>
             <h3 className="stats__number">Score on Codewars</h3>
