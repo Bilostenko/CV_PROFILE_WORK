@@ -15,13 +15,12 @@ const Mywork = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: worksRef.current,
-        start: "top 100%",
+        start: "top 90%",
         end: "bottom 20%",
-        scrub: true,
       }
     });
-    tl.fromTo(worksRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
-  }, [])
+    tl.fromTo(worksRef.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 2 });
+  }, []);
 
   const dispatch = useDispatch()
   const handleNewProjects = (event) => {

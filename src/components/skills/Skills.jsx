@@ -7,18 +7,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Skills = () => {
   const skillsRef = useRef(null);
 
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: skillsRef.current,
-        start: "top 100%",
+        start: "top 90%",
         end: "bottom 20%",
-        scrub: true,
       }
     });
-    tl.fromTo(skillsRef.current, { x: -100, opacity: 0 }, { x: 0, opacity: 1, duration: 2 });
+    tl.fromTo(skillsRef.current, { y: -100, opacity: 0 }, { y: 0, opacity: 1, duration: 2 });
   }, []);
+
 
   return (
     <section className='skills'>

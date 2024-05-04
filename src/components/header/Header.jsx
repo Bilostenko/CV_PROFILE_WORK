@@ -15,8 +15,8 @@ const Header = () => {
       <div className="container header__container">
         <div className="header__wrapper">
           <a href="#" className='header__hero' ref={heroRef}>
-            <span className='header__surname'>Dima </span>
-            <span className='first__name'>BILOSTENKO</span>
+            <span className='header__surname'>My </span>
+            <span className='first__name'>CV</span>
           </a>
         </div>
 
