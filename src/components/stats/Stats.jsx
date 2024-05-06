@@ -23,7 +23,9 @@ const Stats = () => {
   const statsBox1Ref = useRef(null);
   const statsBox2Ref = useRef(null);
   const statsBox3Ref = useRef(null);
-
+  const questionIconRef = useRef(null);
+  const certificatesNumberRef = useRef(null);
+  const gitHubCountRef = useRef(null);
 
   useEffect(() => {
     updateGitHubRepos()
@@ -40,33 +42,41 @@ const Stats = () => {
       yPercent: 0, // Кінцеве положення
     });
   };
-  
+
+  useEffect(() => {
+    const icon = questionIconRef.current;
+
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+    tl.to(icon, { duration: 0.05, rotation: -10 })
+      .to(icon, { duration: 0.05, rotation: 10 });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   useEffect(() => {
     setupScrollAnimation(statsBox1Ref, -40);
   }, [statsBox1Ref]);
-  
+
   useEffect(() => {
     setupScrollAnimation(statsBox2Ref, 40);
   }, [statsBox2Ref]);
-  
+
   useEffect(() => {
     setupScrollAnimation(statsBox3Ref, -40);
   }, [statsBox3Ref]);
-  
-  
-  
-
 
   const updateGitHubRepos = () => {
     clearError()
 
     getRepoCount()
-      .then(res => {
-        setgitHubCount(res);
-      })
-      .catch(err => {
-        console.error('Error while fetching data:', err);
-      });
+    .then(res => {
+      setgitHubCount(res);
+    })
+    .catch(err => {
+      console.error('Error while fetching data:', err);
+    });
 
     getCodeWarsCount()
       .then(res => {
@@ -76,7 +86,52 @@ const Stats = () => {
       .catch(err => {
         console.error('Error while fetching data:', err);
       });
+
   }
+
+  useEffect(() => {
+    const scrollTriggerInstance = ScrollTrigger.create({
+      trigger: certificatesNumberRef.current,
+      start: 'top center',
+      end: 'bottom center',
+      scrub: true,
+      once: true,
+      onEnter: () => {
+        gsap.to(certificatesNumberRef.current, {
+          duration: 1,
+          innerHTML: 11,
+          roundProps: 'innerHTML',
+          ease: 'power1.inOut',
+        })
+      }
+    });
+    return () => {
+      scrollTriggerInstance.kill();
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollTriggerInstance = ScrollTrigger.create({
+      trigger: statsRef.current, // Замінити certificatesNumberRef на statsRef
+      start: 'top center',
+      end: 'bottom center',
+      scrub: true,
+      once: true,
+      onEnter: () => {
+        gsap.to(certificatesNumberRef.current, {
+          duration: 1,
+          innerHTML: 11,
+          roundProps: 'innerHTML',
+          ease: 'power1.inOut',
+        });
+      }
+    });
+    return () => {
+      scrollTriggerInstance.kill();
+    };
+  }, []);
+  
+  
 
 
   const errorMessage = error ? <ErrorMessage /> : null;
@@ -98,16 +153,16 @@ const Stats = () => {
               placement="right"
               title={<Certificates
               />}>
-              <img src={question} alt="icon" />
+              <img src={question} alt="icon" ref={questionIconRef} />
             </Tooltip>
-            <p className="stats__text">11</p>
+            <p className="stats__text" ref={certificatesNumberRef}>0</p>
           </div>
           <div className="stats__item" ref={statsBox2Ref}>
             <div className="stats__item-logo" >
               <img src={statsData.gitHubStats} alt="logo" />
             </div>
             <h3 className="stats__number">Repos on GitHub</h3>
-            <p className="stats__text">
+            <p className="stats__text" ref={gitHubCountRef}>
               {errorMessage}
               {spinner}
               {gitHubCount ? gitHubCount.length : 'Loading...'}
