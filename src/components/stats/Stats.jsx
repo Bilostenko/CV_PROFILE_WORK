@@ -39,7 +39,7 @@ const Stats = () => {
         trigger: statsRef.current,
         scrub: true,
       },
-      yPercent: 0, // Кінцеве положення
+      yPercent: 0,
     });
   };
 
@@ -71,12 +71,12 @@ const Stats = () => {
     clearError()
 
     getRepoCount()
-    .then(res => {
-      setgitHubCount(res);
-    })
-    .catch(err => {
-      console.error('Error while fetching data:', err);
-    });
+      .then(res => {
+        setgitHubCount(res);
+      })
+      .catch(err => {
+        console.error('Error while fetching data:', err);
+      });
 
     getCodeWarsCount()
       .then(res => {
@@ -109,27 +109,33 @@ const Stats = () => {
       scrollTriggerInstance.kill();
     };
   }, []);
-
   useEffect(() => {
-    const scrollTriggerInstance = ScrollTrigger.create({
-      trigger: statsRef.current, // Замінити certificatesNumberRef на statsRef
-      start: 'top center',
-      end: 'bottom center',
-      scrub: true,
-      once: true,
-      onEnter: () => {
-        gsap.to(certificatesNumberRef.current, {
-          duration: 1,
-          innerHTML: 11,
-          roundProps: 'innerHTML',
-          ease: 'power1.inOut',
-        });
-      }
-    });
+    let scrollTriggerInstance;
+  
+    if (!loading && gitHubCountRef.current && gitHubCountRef.current.parentNode) {
+      const content = ErrorMessage || Spinner || (gitHubCount !== null ? gitHubCount.length : 'Loading...');
+      scrollTriggerInstance = ScrollTrigger.create({
+        trigger: gitHubCountRef.current,
+        start: 'top center',
+        end: 'bottom center',
+        scrub: true,
+        once: true,
+        onEnter: () => {
+          gsap.to(gitHubCountRef.current, {
+            duration: 1,
+            innerHTML: content,
+            roundProps: 'innerHTML',
+            ease: 'power1.inOut',
+          });
+        },
+      });
+    }
     return () => {
-      scrollTriggerInstance.kill();
+      if (scrollTriggerInstance) {
+        scrollTriggerInstance.kill();
+      }
     };
-  }, []);
+  }, [loading, gitHubCount, ErrorMessage, Spinner, gitHubCountRef.current]);
   
   
 
@@ -163,9 +169,9 @@ const Stats = () => {
             </div>
             <h3 className="stats__number">Repos on GitHub</h3>
             <p className="stats__text" ref={gitHubCountRef}>
-              {errorMessage}
+              {/* {errorMessage}
               {spinner}
-              {gitHubCount ? gitHubCount.length : 'Loading...'}
+              {gitHubCount ? gitHubCount.length : 'Loading...'} */}
             </p>
           </div>
           <div className="stats__item" ref={statsBox3Ref}>
