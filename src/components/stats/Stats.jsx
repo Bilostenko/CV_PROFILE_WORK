@@ -26,6 +26,7 @@ const Stats = () => {
   const questionIconRef = useRef(null);
   const certificatesNumberRef = useRef(null);
   const gitHubCountRef = useRef(null);
+  const codeWarsCountRef = useRef(null);
 
   useEffect(() => {
     updateGitHubRepos()
@@ -98,7 +99,7 @@ const Stats = () => {
       once: true,
       onEnter: () => {
         gsap.to(certificatesNumberRef.current, {
-          duration: 1,
+          duration: 2,
           innerHTML: 11,
           roundProps: 'innerHTML',
           ease: 'power1.inOut',
@@ -109,35 +110,59 @@ const Stats = () => {
       scrollTriggerInstance.kill();
     };
   }, []);
+
   useEffect(() => {
-    let scrollTriggerInstance;
-  
-    if (!loading && gitHubCountRef.current && gitHubCountRef.current.parentNode) {
-      const content = ErrorMessage || Spinner || (gitHubCount !== null ? gitHubCount.length : 'Loading...');
-      scrollTriggerInstance = ScrollTrigger.create({
+    if (gitHubCount !== null) {
+      const content = gitHubCount.length > 0 ? gitHubCount.length : <Spinner />;
+      const scrollTriggerInstance = ScrollTrigger.create({
         trigger: gitHubCountRef.current,
-        start: 'top center',
+        start: 'top bottom',
         end: 'bottom center',
         scrub: true,
         once: true,
         onEnter: () => {
           gsap.to(gitHubCountRef.current, {
-            duration: 1,
+            duration: 2,
             innerHTML: content,
             roundProps: 'innerHTML',
             ease: 'power1.inOut',
           });
         },
       });
-    }
-    return () => {
-      if (scrollTriggerInstance) {
+      return () => {
         scrollTriggerInstance.kill();
-      }
-    };
-  }, [loading, gitHubCount, ErrorMessage, Spinner, gitHubCountRef.current]);
-  
-  
+      };
+    } else {
+       <ErrorMessage />;
+    }
+  }, [gitHubCount]);
+
+
+  useEffect(() => {
+    if (codewarsCountScore !== null) {
+      const content = codewarsCountScore > 0 ? codewarsCountScore : <Spinner />;
+      const scrollTriggerInstance = ScrollTrigger.create({
+        trigger: codeWarsCountRef.current,
+        start: 'top bottom',
+        end: 'bottom center',
+        scrub: true,
+        once: true,
+        onEnter: () => {
+          gsap.to(codeWarsCountRef.current, {
+            duration: 2,
+            innerHTML: content,
+            roundProps: 'innerHTML',
+            ease: 'power1.inOut',
+          });
+        },
+      });
+      return () => {
+        scrollTriggerInstance.kill();
+      };
+    } else {
+       <ErrorMessage />;
+    }
+  }, [codewarsCountScore]);
 
 
   const errorMessage = error ? <ErrorMessage /> : null;
@@ -172,6 +197,7 @@ const Stats = () => {
               {/* {errorMessage}
               {spinner}
               {gitHubCount ? gitHubCount.length : 'Loading...'} */}
+              0
             </p>
           </div>
           <div className="stats__item" ref={statsBox3Ref}>
@@ -179,10 +205,11 @@ const Stats = () => {
               <img src={statsData.codeWarsStats} alt="logo" />
             </div>
             <h3 className="stats__number">Score on Codewars</h3>
-            <p className="stats__text">
-              {errorMessage}
+            <p className="stats__text" ref={codeWarsCountRef}>
+              {/* {errorMessage}
               {spinner}
-              {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)}
+              {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)} */}
+              0
             </p>
             <p className="stats__number">Rank:{' '}
               {errorMessage}
