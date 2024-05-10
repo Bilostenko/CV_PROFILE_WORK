@@ -31,3 +31,15 @@
 .first__name {
   font-weight: 700;
 }
+
+.lng__btns-wrapper{
+  margin-left: 2rem;
+}
+.lng__btns-wrapper > a{
+  margin-left: 1rem;
+}
+
+.lng__btns-wrapper > a.disabled-link {
+  pointer-events: none;
+  opacity: 0.6; 
+}

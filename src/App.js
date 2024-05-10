@@ -6,7 +6,13 @@ import Mywork from "./components/myWork/Mywork";
 import Skills from "./components/skills/Skills";
 import Stats from "./components/stats/Stats";
 
+import index from "./components/i18n/index.js";
+import { useTranslation } from "react-i18next";
+
 function App() {
+
+const {t} = useTranslation();
+
   return (
     <div className="App">
       < Header />
