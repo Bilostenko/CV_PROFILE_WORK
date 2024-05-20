@@ -27,7 +27,8 @@
   border-radius: 20px;
   position: relative;
 }
-.stats__item>img{
+
+.stats__item>img {
   position: absolute;
   right: 1rem;
   width: 2.5rem;
@@ -58,4 +59,45 @@
 
 .stats__number {
   padding-top: 10px;
+}
+
+
+@media (max-width: 940px) {
+
+  .stats__item,
+  .stats__rank>img {
+    max-width: 170px;
+  }
+
+  .stats__number {
+    font-size: 22px;
+    padding-left: 44px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .stats__item {
+    max-width: 130px;
+  }
+
+  .stats__number {
+    font-size: 20px;
+    padding-left: inherit;
+  }
+
+  .stats__rank>img {
+    max-width: 143px;
+    max-height: 135px;
+  }
+}
+
+@media (max-width: 590px) {
+
+  .stats__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 }

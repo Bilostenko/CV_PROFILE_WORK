@@ -64,9 +64,9 @@ const About = () => {
         <div className="about__wrapper" ref={containerRef}>
           <div className="about__description" ref={leftBlockRef}>
             <ul className="about__description-list" ref={listRef}>
-              <li className="about__desctiption-item" >{herodescriptionData.achievementList.item1}</li>
-              <li className="about__desctiption-item" >{herodescriptionData.achievementList.item2}</li>
-              <li className="about__desctiption-item" >{herodescriptionData.achievementList.item3}</li>
+              <li className="about__desctiption-item">{herodescriptionData.achievementList.item1}</li>
+              <li className="about__desctiption-item">{herodescriptionData.achievementList.item2}</li>
+              <li className="about__desctiption-item">{herodescriptionData.achievementList.item3}</li>
             </ul>
           </div>
           <div className="about__photo" ref={rightBlockRef}>
@@ -75,6 +75,7 @@ const About = () => {
         </div>
       </div>
     </section>
+
   );
 }
 

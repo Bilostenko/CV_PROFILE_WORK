@@ -211,7 +211,7 @@ const Stats = () => {
               {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)} */}
               0
             </p>
-            <p className="stats__number">Rank:{' '}
+            <p className="stats__rank">Rank:{' '}
               {errorMessage}
               {spinner}
               {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}</p>

@@ -1,17 +1,17 @@
 .work__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px; 
-  max-width: 1280px; 
-  margin: 0 auto; 
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 10px 10px 100px 10px;
 }
 
 .work__item {
-  list-style: none; 
-  position: relative; 
-  border: 1px solid #d9d9d9; 
-  border-radius: 8px; 
+  list-style: none;
+  position: relative;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
 }
 
 .drawer-container {
@@ -19,14 +19,14 @@
 }
 
 .image-container {
-  height: 300px; 
-  overflow: hidden; 
+  height: 300px;
+  overflow: hidden;
 }
 
-.image-container > img {
-  width: 100%; 
+.image-container>img {
+  width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 .open-button {
@@ -35,24 +35,30 @@
   left: 16px;
 }
 
-.ant-drawer-body>p{
-  color: black ;
-  font-weight: 600 ;
-  font-size: 18px ;
-  line-height: 25px ;
+.ant-drawer-body>p {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
 }
-.open-button{
+
+.open-button {
   background-color: black;
 }
 
-.ant-drawer-title{
+.ant-drawer-title {
   font-weight: 800 !important;
   padding: 10px 10px !important;
 }
+
 .ant-drawer-body>p>a {
   color: #55D983;
 }
-.open-button>span{
+
+.open-button>span {
   font-size: 15px;
   color: #55D983;
+}
+
+@media (max-width: 500px) {
 }

@@ -13,7 +13,6 @@
   padding: 50px;
   background-color: #2C2C2C;
   position: absolute;
-  top: -10px;
   z-index: 1;
   top: 60px;
   left: 522px;
@@ -152,8 +151,33 @@
   .hero__name {
     line-height: inherit;
   }
+
   .hero__description {
-   top: -16px;
-   left: 177px;
+    top: -16px;
+    left: 177px;
+  }
+}
+
+@media (max-width: 670px) {
+  .hero__workplace {
+    display: none;
+    margin-top: 2rem;
+  }
+
+  .hero__description {
+    left: -3px;
+  }
+
+  .about__title {
+    padding-top: 14rem;
+  }
+}
+@media (max-width: 400px) {
+  .hero__social_wrapper{
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .hero_dynamic-info{
+    font-size: 15px;
   }
 }

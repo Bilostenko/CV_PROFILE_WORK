@@ -1,6 +1,8 @@
 import Typist from 'react-typist';
 import React, { useState } from 'react';
 
+import './text.css'
+
 const Text = () => {
 
   const [loopCount, setLoopCount] = useState(0);
@@ -11,7 +13,7 @@ const Text = () => {
 
 
   return ( 
-    <div className="">
+    <div className="typist">
        <Typist avgTypingDelay={80} cursor={{ show: false }} onTypingDone={handleTypistLoop} key={loopCount}>
                 <span>HTML</span>
                 <Typist.Backspace count={4} delay={700} />
@@ -23,7 +25,7 @@ const Text = () => {
                 <Typist.Backspace count={5} delay={1000} />
                 <span>Redux</span>
                 <Typist.Backspace count={5} delay={1100} />
-                <span>and many more...</span>
+                <span className="many-more">and many more...</span>
                 <Typist.Backspace count={16} delay={1200} />
               </Typist>
     </div>
