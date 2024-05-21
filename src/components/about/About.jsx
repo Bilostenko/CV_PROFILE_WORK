@@ -1,5 +1,5 @@
 import './about.css';
-import { herodescription } from '../../data/data'
+import { herodescription } from '../../data/data';
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -13,6 +13,9 @@ const About = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Початкова анімація заголовка та списку
     const tl = gsap.timeline();
     tl.fromTo(
       aboutRef.current,
@@ -24,34 +27,25 @@ const About = () => {
       { x: 0, opacity: 1, duration: 2, scale: 1, stagger: 0.5 },
       '-=1'
     );
-  }, []);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    // Анімація при скролі для правого блоку (стає невидимим)
     gsap.to(rightBlockRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
         scrub: true
       },
-      yPercent: 40,
-      scale: 0.5,
-      xPercent: -80,
       opacity: 0,
       duration: 1
-    })
-  }, []);
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    });
+
+    // Анімація при скролі для лівого блоку (стає невидимим)
     gsap.to(leftBlockRef.current, {
       scrollTrigger: {
         trigger: containerRef.current,
         start: 'top top',
         scrub: true
       },
-      yPercent: 80,
-      scale: 0.5,
-      xPercent: 50,
       opacity: 0,
       duration: 2
     });
@@ -75,7 +69,6 @@ const About = () => {
         </div>
       </div>
     </section>
-
   );
 }
 

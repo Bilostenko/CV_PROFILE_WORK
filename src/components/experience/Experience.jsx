@@ -6,8 +6,8 @@ const Experience = () => {
   return (
     <section className="experience">
       <div className="container experience__container">
-        < Education />
         < Work />
+        < Education />
       </div>
     </section>
 

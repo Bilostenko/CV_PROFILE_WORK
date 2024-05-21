@@ -2,7 +2,7 @@ import './header.css'
 import gsap from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {ukrLanguage, engLanguage} from '../../redux/actions.js';
+import { ukrLanguage, engLanguage } from '../../redux/actions.js';
 
 import i18next from 'i18next';
 import { LOCALES } from '../i18n/constants.js'
@@ -13,7 +13,7 @@ const Header = () => {
   const heroRef = useRef(null);
   const { t } = useTranslation();
   const selectedLanguage = useSelector(state => state.language.selectedLanguage);
-  
+
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -52,7 +52,7 @@ const Header = () => {
             {/* <a href="/" className={`bn5 ${i18next.language === LOCALES.UK ? 'disabled-link' : ''}`} onClick={() => i18next.changeLanguage(LOCALES.UK)}>Ukrainian</a>
             <a href="/" className={`bn5 ${i18next.language === LOCALES.EN ? 'disabled-link' : ''}`} onClick={() => i18next.changeLanguage(LOCALES.EN)}>English</a> */}
           </div>
-          {/* <h3>{t('Welcome to React')}</h3> */}
+          <h3>{t('Welcome to React')}</h3>
         </div>
 
       </div>
