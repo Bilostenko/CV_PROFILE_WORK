@@ -27,12 +27,12 @@ const Header = () => {
 
   const dispatch = useDispatch()
   const handleUkrlanguage = (event) => {
-    event.preventdefault()
+    event.preventDefault()
     dispatch(ukrLanguage())
   }
 
   const handleEngLanguage = (event) => {
-    event.preventdefault()
+    event.preventDefault()
     dispatch(engLanguage())
   }
 
@@ -46,7 +46,7 @@ const Header = () => {
             <span className='first__name'>CV</span>
           </a>
           <div className="lng__btns-wrapper">
-            {/* <h3>{i18next.language}</h3> */}
+            <h3>{selectedLanguage}</h3>
             <a href="/" className={`bn5 ${i18next.language === LOCALES.UK ? 'disabled-link' : ''}`} onClick={handleUkrlanguage}>Ukrainian</a>
             <a href="/" className={`bn5 ${i18next.language === LOCALES.EN ? 'disabled-link' : ''}`} onClick={handleEngLanguage}>English</a>
             {/* <a href="/" className={`bn5 ${i18next.language === LOCALES.UK ? 'disabled-link' : ''}`} onClick={() => i18next.changeLanguage(LOCALES.UK)}>Ukrainian</a>

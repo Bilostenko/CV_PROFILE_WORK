@@ -21,6 +21,7 @@ i18n
   .init({
     resources,
     fallbackLng: LOCALES.UK,
+    // lng: LOCALES.UK,
     interpolation: {
       escapeValue: false
     }
