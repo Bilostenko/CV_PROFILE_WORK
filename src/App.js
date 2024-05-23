@@ -12,6 +12,7 @@ import store from './redux/store';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 function App() {
+  console.log('Rendering App with language:', i18next.language);
   return (
     <div className="App">
       <Provider store={store}>

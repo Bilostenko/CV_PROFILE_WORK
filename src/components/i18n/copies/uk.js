@@ -1,3 +1,3 @@
 export const uk = {
-  "Welcome to React": "Ласкаво просимо до React і react-i18next"
-}
+  'Welcome to React': 'Ласкаво просимо до React',
+};

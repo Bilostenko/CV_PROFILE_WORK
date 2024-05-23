@@ -1,19 +1,19 @@
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { LOCALES } from './constants.js';
-import { uk} from "../i18n/copies/uk.js";
-import { en} from "../i18n/copies/en.js";
-
+import { LOCALES } from './constants';
+import { uk } from './copies/uk';
+import { en } from './copies/en';
 
 const resources = {
   [LOCALES.EN]: {
-    translation: en
+    translation: en,
   },
   [LOCALES.UK]: {
-    translation: uk
-  }
+    translation: uk,
+  },
 };
+console.log('Initializing i18next with resources:', resources);
 
 i18n
   .use(initReactI18next)
@@ -21,9 +21,21 @@ i18n
   .init({
     resources,
     fallbackLng: LOCALES.UK,
-    // lng: LOCALES.UK,
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
+    },
+  }, (err, t) => {
+    if (err) {
+      console.error('i18next initialization error:', err);
+    } else {
+      console.log('i18next initialized with language:', i18n.language);
+      console.log('Available resources:', resources);
     }
   });
+
+i18n.on('languageChanged', (lng) => {
+  console.log(`Language changed to: ${lng}`);
+  console.log('Current translations:', i18n.getDataByLanguage(lng));
+});
+export default i18n;
 
