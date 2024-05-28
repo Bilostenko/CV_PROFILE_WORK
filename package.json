@@ -8,8 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.16.0",
     "gsap": "^3.12.5",
-    "i18next": "^23.11.5",
-    "i18next-browser-languagedetector": "^7.2.1",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",

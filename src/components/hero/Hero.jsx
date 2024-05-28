@@ -1,6 +1,7 @@
 import './hero.css'
 
 import React, { useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { herodescription, social } from '../../data/data';
 import download from '../../assets/icons/free-icon-internet-download-manager-13876813.png';
 import Text from './type_animation/Text';
@@ -54,6 +55,7 @@ const Hero = () => {
     });
   }, []);
 
+  
   return (
     <section className="hero">
       <div className="container">
@@ -79,7 +81,7 @@ const Hero = () => {
                   </ul>
                 </div>
               </div>
-              <div ref={descRef}>{description}</div>
+              <div ref={descRef} data-i18n="description">{description}</div>
               <a href={require("../../assets/CV_Bilostenko.pdf")} download="Bilostenko.pdf">
                 <button className="bn632-hover bn22">
                   <img src={download} alt="Download" />

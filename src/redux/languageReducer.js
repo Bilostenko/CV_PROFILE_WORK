@@ -1,23 +1,24 @@
-import { CHANGE_ENG_LANGUAGE, CHANGE_UKR_LANGUAGE } from "./types";
+import { SET_LANGUAGE } from './types';
+import ua from '../components/i18n/ua';
+import en from '../components/i18n/eng';
 
 const initialState = {
-  selectedLanguage: 'UK' 
+  language: 'ua',
+  translations: ua
 };
 
-
-export const languageReducer = (state = initialState, action) => {
+const languageReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CHANGE_ENG_LANGUAGE:
+    case SET_LANGUAGE:
+      const translations = action.payload === 'ua' ? ua : en;
       return {
         ...state,
-        selectedLanguage: 'EN', 
-      };
-    case CHANGE_UKR_LANGUAGE:
-      return {
-        ...state,
-        selectedLanguage: 'UK', 
+        language: action.payload,
+        translations
       };
     default:
       return state;
   }
 };
+
+export default languageReducer;

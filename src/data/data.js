@@ -55,10 +55,6 @@ import keyCode from '../assets/image/worklist/keyCode.png';
 import pizzaConstructor from '../assets/image/worklist/pizza-constructor.png';
 import japanLanding from '../assets/image/worklist/japan-landing.png';
 
-// FISH
-
-
-
 export const herodescription = () => {
   const workPlaceImg = workplace;
   const personalPhotoImg = personalPhoto;
