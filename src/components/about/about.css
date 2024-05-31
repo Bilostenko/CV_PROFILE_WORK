@@ -11,7 +11,7 @@ body {
   padding: 0 1rem;
 }
 
-.about__title {
+.about__title{
   font-size: 1.875rem;
   line-height: 2.25rem;
   letter-spacing: -.025em;
@@ -19,7 +19,10 @@ body {
   margin-bottom: 1rem;
   text-shadow: #55D983 1px 0 5px;
   padding-top: 2rem;
+}
 
+.text-white{
+  color: var(--main) !important;
 }
 
 .about__title span {

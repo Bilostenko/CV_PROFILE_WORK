@@ -1,4 +1,20 @@
 export default {
   "my": "Моє",
-  "cv": "резюме"
+  "cv": "резюме",
+  "description": "Я <strong class='text-white'>розробник програмного забезпечення</strong>, який шукає нові можливості для співрпаці",
+  "resume": "Резюме",
+  "name": "Дмитро Білостенко",
+  "achievement1": "Я маю підтвердженні навички CSS на LinkedIn",
+  "achievement2": "Сертифікація з курсу Freecodecamp `Responsive Web Design` і `JavaScript Algorithms and Data Structures`, сертифікація завершення школи CyberBionic systematics і програми IT Generation",
+  "achievement3": "4 kyu Rank на CodeWars з більш ніж 600 завершеними завданнями в JavaScript",
+  "abo": "Про",
+  "utme": " мене",
+  "sta": "Стати",
+  "ts": "стика",
+  "сore": "Основний технологічний стек",
+  "tech": " та інструменти",
+  "my": "Мої",
+  "works": " роботи",
+  "exp": "До",
+  "erience": "свід",
 };

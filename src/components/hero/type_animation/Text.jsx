@@ -25,7 +25,7 @@ const Text = () => {
                 <Typist.Backspace count={5} delay={1000} />
                 <span>Redux</span>
                 <Typist.Backspace count={5} delay={1100} />
-                <span className="many-more">and many more...</span>
+                <span className="many-more"> more oher stack...</span>
                 <Typist.Backspace count={16} delay={1200} />
               </Typist>
     </div>

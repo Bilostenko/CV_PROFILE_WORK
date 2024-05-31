@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import './stats.css';
 import { stats } from '../../data/data';
 import useApiService from '../../services/APIservice';
@@ -12,6 +13,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 const Stats = () => {
 
   const statsData = stats();
+  const translations = useSelector(state => state.language.translations);
   const { error, loading, getRepoCount, getCodeWarsCount, clearError } = useApiService()
   const [gitHubCount, setgitHubCount] = useState(null);
   const [codewarsCountScore, setcodewarsCountScore] = useState(null);
@@ -133,7 +135,7 @@ const Stats = () => {
         scrollTriggerInstance.kill();
       };
     } else {
-       <ErrorMessage />;
+      <ErrorMessage />;
     }
   }, [gitHubCount]);
 
@@ -160,9 +162,23 @@ const Stats = () => {
         scrollTriggerInstance.kill();
       };
     } else {
-       <ErrorMessage />;
+      <ErrorMessage />;
     }
   }, [codewarsCountScore]);
+
+  useEffect(() => {
+    const translateElements = () => {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[key]) {
+          el.innerHTML = translations[key];
+        }
+      });
+    };
+
+    translateElements();
+  }, [translations]);
 
 
   const errorMessage = error ? <ErrorMessage /> : null;
@@ -171,8 +187,10 @@ const Stats = () => {
   return (
     <section className="stats">
       <div className="container">
-        <h2 className="stats__title" ref={statsRef}><span>Sta</span>ts</h2>
-
+        <h2 className='stats__title' ref={statsRef}>
+          <span data-i18n="sta" >Sta</span>
+          <span data-i18n="ts" className="text-white">ts</span>
+        </h2>
         <div className="stats__wrapper">
           <div className="stats__item" ref={statsBox1Ref}>
             <div className="stats__item-logo" >

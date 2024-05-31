@@ -58,16 +58,18 @@ import japanLanding from '../assets/image/worklist/japan-landing.png';
 export const herodescription = () => {
   const workPlaceImg = workplace;
   const personalPhotoImg = personalPhoto;
-  const name = 'Dima BILOSTENKO';
-  const description = (
-    <p className="hero__social-personal">I`m hard working <strong className='text-white'>software developer</strong>  who looks for working with open minded team of individuals</p>
-  );
-  const achievementList = { item1: "I have confirmed  CSS skills on LinkedIn", item2: "Certification from Freecodecamp course on `Responsive Web Design` and `JavaScript Algorithms and Data Structures`, certification of completion of CyberBionic systematics school and IT Generation", item3: "4 kyu Rank on CodeWars with total completed 600+ challenges in JavaScript" }
+  const nameKey = 'name';
+  const descriptionKey = 'description';
+  const achievementList = { 
+    item1: "achievement1", 
+    item2: "achievement2", 
+    item3: "achievement3"
+  }
 
   return {
     workPlaceImg,
-    name,
-    description,
+    nameKey,
+    descriptionKey,
     achievementList,
     personalPhotoImg
   };
