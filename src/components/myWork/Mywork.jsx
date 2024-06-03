@@ -57,8 +57,8 @@ const Mywork = () => {
 
         {/* <h2 className="stats__title work__title" ref={worksRef}><span>My</span> works</h2> */}
         <div className="work__btns-wrapper">
-          <a href="/" class="bn5" onClick={handleNewProjects}>New </a>
-          <a href="/" class="bn5" onClick={handleOldProjects}>Old</a>
+          <a href="/" class="bn5" onClick={handleNewProjects} data-i18n="new">New </a>
+          <a href="/" class="bn5" onClick={handleOldProjects} data-i18n="old">Old</a>
         </div>
         < WorkList />
       </div>

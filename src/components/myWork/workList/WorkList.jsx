@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './worklist.css';
 import { myWorkList } from '../../../data/data';
 import { Button, Drawer } from 'antd';
@@ -9,6 +9,21 @@ const WorkList = () => {
   const workListNew = myWorkList().worklist.new;
   const workListOld = myWorkList().worklist.old;
   const [openDrawerIndex, setOpenDrawerIndex] = useState(null);
+  const translations = useSelector(state => state.language.translations);
+
+  const translateElements = () => {
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[key]) {
+        if (el.tagName === 'BUTTON' || el.tagName === 'A') {
+          el.textContent = translations[key];
+        } else {
+          el.innerHTML = translations[key];
+        }
+      }
+    });
+  };
 
   const showDrawer = (index) => {
     setOpenDrawerIndex(index);
@@ -17,6 +32,17 @@ const WorkList = () => {
   const onClose = () => {
     setOpenDrawerIndex(null);
   };
+
+  useEffect(() => {
+    translateElements();
+  }, [translations]);
+
+  useEffect(() => {
+    if (openDrawerIndex !== null) {
+      translateElements();
+    }
+  }, [openDrawerIndex]);
+
   const workList = selectedList === 'new' ? workListNew : workListOld;
 
   return (
@@ -28,7 +54,7 @@ const WorkList = () => {
               <div className="image-container">
                 <img src={item.image} alt={item.name} />
               </div>
-              <Button type="primary" onClick={() => showDrawer(index)} className="open-button">
+              <Button type="primary" onClick={() => showDrawer(index)} className="open-button" data-i18n="details">
                 Details...
               </Button>
               <Drawer
@@ -42,17 +68,16 @@ const WorkList = () => {
               >
                 <p className='work__description'>{item.description}</p>
                 <p>
-                  <a href={item.linkPage} target="_blank" rel="noopener noreferrer">Link to Page</a>
+                  <a href={item.linkPage} target="_blank" rel="noopener noreferrer" data-i18n="linkToPage">Link to Page</a>
                 </p>
                 <p>
-                  <a href={item.linkRepo} target="_blank" rel="noopener noreferrer">Link to Repo</a>
+                  <a href={item.linkRepo} target="_blank" rel="noopener noreferrer" data-i18n="linkToRepo">Link to Repo</a>
                 </p>
               </Drawer>
             </div>
           </li>
         ))}
       </ul>
-
     </>
   );
 };

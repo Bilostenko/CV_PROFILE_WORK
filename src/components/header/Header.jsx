@@ -47,11 +47,11 @@ const Header = () => {
           <div className="lng__btns-wrapper">
             <a href="/"
               className={`bn5 ${currentLanguage === 'ua' ? 'disabled-link' : ''}`}
-              onClick={(event) => handleLanguageChange('ua', event)}>Ukrainian
+              onClick={(event) => handleLanguageChange('ua', event)} data-i18n="ukrainian">Ukrainian
             </a>
             <a href="/"
               className={`bn5 ${currentLanguage === 'en' ? 'disabled-link' : ''}`}
-              onClick={(event) => handleLanguageChange('en', event)}>English
+              onClick={(event) => handleLanguageChange('en', event)} data-i18n="english">English
             </a>
           </div>
         </div>

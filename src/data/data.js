@@ -95,10 +95,19 @@ export const stats = () => {
   const codeWarsStats = codeWars;
   const certificate = certificates;
 
+  const statsList = { 
+    certificate: "сertificates",
+    repo: "repos",
+    score: "scores",
+    rank: "ranks",
+
+  }
+
   return {
     gitHubStats,
     codeWarsStats,
-    certificate
+    certificate,
+    statsList
   }
 }
 

@@ -180,7 +180,6 @@ const Stats = () => {
     translateElements();
   }, [translations]);
 
-
   const errorMessage = error ? <ErrorMessage /> : null;
   const spinner = loading ? <Spinner /> : null;
 
@@ -196,7 +195,7 @@ const Stats = () => {
             <div className="stats__item-logo" >
               <img src={statsData.certificate} alt="logo" />
             </div>
-            <h3 className="stats__number">Certificates (clickable)</h3>
+            <h3 className="stats__number" data-i18n="certificates">{statsData.statsList.certificate}</h3>
             <Tooltip
               className='tooltip'
               placement="right"
@@ -210,7 +209,7 @@ const Stats = () => {
             <div className="stats__item-logo" >
               <img src={statsData.gitHubStats} alt="logo" />
             </div>
-            <h3 className="stats__number">Repos on GitHub</h3>
+            <h3 className="stats__number" data-i18n="repos">{statsData.statsList.repo}</h3>
             <p className="stats__text" ref={gitHubCountRef}>
               {/* {errorMessage}
               {spinner}
@@ -222,14 +221,14 @@ const Stats = () => {
             <div className="stats__item-logo" >
               <img src={statsData.codeWarsStats} alt="logo" />
             </div>
-            <h3 className="stats__number">Score on Codewars</h3>
+            <h3 className="stats__number" data-i18n="scores">{statsData.statsList.score}</h3>
             <p className="stats__text" ref={codeWarsCountRef}>
               {/* {errorMessage}
               {spinner}
               {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)} */}
               0
             </p>
-            <p className="stats__rank">Rank:{' '}
+            <p className="stats__rank" data-i18n="ranks">{statsData.statsList.rankі}
               {errorMessage}
               {spinner}
               {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}</p>
