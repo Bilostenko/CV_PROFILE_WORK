@@ -31,4 +31,9 @@ export default {
   "details": "Details...",
   "linkToPage": "Link to Page",
   "linkToRepo": "Link to Repo",
+  // PROJECT DESCRIPTIONS
+  'calculatorDescription': 'Calculator written in Javascript',
+  'marvelDescription': 'Find your marvel hero and check his biography.',
+  'pizzaDescription': 'Just Javascript and nothing else =) Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.',
+  'norrislDescription': 'Welcome to the Chuck Norris Joke Collection! Press the button and brace yourself for a laugh harder than Chuck`s roundhouse kick.',
 };

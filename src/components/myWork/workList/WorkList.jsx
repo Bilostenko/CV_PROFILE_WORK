@@ -55,7 +55,7 @@ const WorkList = () => {
                 <img src={item.image} alt={item.name} />
               </div>
               <Button type="primary" onClick={() => showDrawer(index)} className="open-button" data-i18n="details">
-                Details...
+                {translations['details'] || 'Details...'}
               </Button>
               <Drawer
                 title={`${item.name} (${item.tools})`}
@@ -66,12 +66,16 @@ const WorkList = () => {
                 getContainer={false}
                 style={{ position: 'absolute', top: 0, right: 0, width: '80%' }}
               >
-                <p className='work__description'>{item.description}</p>
+                <p className='work__description'>{translations[item.description] || item.description}</p>
                 <p>
-                  <a href={item.linkPage} target="_blank" rel="noopener noreferrer" data-i18n="linkToPage">Link to Page</a>
+                  <a href={item.linkPage} target="_blank" rel="noopener noreferrer" data-i18n="linkToPage">
+                    {translations['linkToPage'] || 'Link to Page'}
+                  </a>
                 </p>
                 <p>
-                  <a href={item.linkRepo} target="_blank" rel="noopener noreferrer" data-i18n="linkToRepo">Link to Repo</a>
+                  <a href={item.linkRepo} target="_blank" rel="noopener noreferrer" data-i18n="linkToRepo">
+                    {translations['linkToRepo'] || 'Link to Repo'}
+                  </a>
                 </p>
               </Drawer>
             </div>

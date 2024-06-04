@@ -1,5 +1,5 @@
 import './Mywork.css'
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import WorkList from './workList/WorkList';
 import { useDispatch, useSelector } from 'react-redux';
 import { newProjects, oldProjects } from '../../redux/actions';
@@ -10,6 +10,7 @@ const Mywork = () => {
 
   const worksRef = useRef(null);
   const translations = useSelector(state => state.language.translations);
+  const [selectedList, setSelectedList] = useState('new');
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -26,12 +27,14 @@ const Mywork = () => {
   const dispatch = useDispatch()
   const handleNewProjects = (event) => {
     event.preventDefault();
-    dispatch(newProjects())
-  }
+    setSelectedList('new');
+    dispatch(newProjects());
+  };
   const handleOldProjects = (event) => {
     event.preventDefault();
-    dispatch(oldProjects())
-  }
+    setSelectedList('old');
+    dispatch(oldProjects());
+  };
 
   useEffect(() => {
     const translateElements = () => {
@@ -50,15 +53,14 @@ const Mywork = () => {
   return (
     <section className="work">
       <div className="container">
-      <h2 className='stats__title work__title' ref={worksRef}>
+        <h2 className='stats__title work__title' ref={worksRef}>
           <span data-i18n="my" >My</span>
           <span data-i18n="works" className="text-white">works</span>
         </h2>
-
         {/* <h2 className="stats__title work__title" ref={worksRef}><span>My</span> works</h2> */}
         <div className="work__btns-wrapper">
-          <a href="/" class="bn5" onClick={handleNewProjects} data-i18n="new">New </a>
-          <a href="/" class="bn5" onClick={handleOldProjects} data-i18n="old">Old</a>
+          <a href="/" className={`bn5 ${selectedList === 'new' ? 'disabled-link' : ''}`} onClick={handleNewProjects} data-i18n="new">New</a>
+          <a href="/" className={`bn5 ${selectedList === 'old' ? 'disabled-link' : ''}`} onClick={handleOldProjects} data-i18n="old">Old</a>
         </div>
         < WorkList />
       </div>

@@ -221,7 +221,7 @@ export const myWorkList = () => {
           linkRepo: 'https://bilostenko.github.io/calculator/',
           tools: 'HTML, CSS, JavaScript',
           image: calculator,
-          description: 'Calculator written in Javascript'
+          description: 'calculatorDescription'
         },
         {
           name: 'Marvel Characters',
@@ -229,7 +229,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/marvel-character/tree/main',
           tools: 'HTML, SCSS, JavaScript, React, API',
           image: marvel,
-          description: 'Find your marvel hero and check his biography.'
+          description: 'marvelDescription'
         },
         {
           name: 'Pizza Website',
@@ -237,7 +237,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/pizza-website',
           tools: 'HTML, SCSS, JavaScript',
           image: pizza,
-          description: 'Just Javascript and nothing else =) Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.'
+          description: 'pizzaDescription'
         },
         {
           name: 'Chuk Norris Joke Collection',
@@ -245,7 +245,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/Chuk-Norris-Joke-API',
           tools: 'HTML, SCSS, JavaScript, API',
           image: chuk,
-          description: 'Welcome to the Chuck Norris Joke Collection! Press the button and brace yourself for a laugh harder than Chuck`s roundhouse kick.'
+          description: 'norrislDescription'
         },
         {
           name: 'Shopping lannding page',
