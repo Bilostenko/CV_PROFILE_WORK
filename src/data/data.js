@@ -216,7 +216,7 @@ export const myWorkList = () => {
     worklist: {
       new: [
         {
-          name: 'Calculator',
+          name: 'calculatorName',
           linkPage: 'https://github.com/Bilostenko/calculator/tree/master',
           linkRepo: 'https://bilostenko.github.io/calculator/',
           tools: 'HTML, CSS, JavaScript',
@@ -253,7 +253,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/Shopping-website/tree/master',
           tools: 'HTML, SCSS, JavaScript, React, GSAP',
           image: shopping,
-          description: 'Simple landing page build on React and GSAP animation library.'
+          description: 'shoppingDescription'
         },
       ],
       old: [
@@ -263,7 +263,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/kartik-bansal-cv',
           tools: 'HTML, CSS',
           image: katrik,
-          description: 'Simple landing page. Just JS and CSS'
+          description: 'karkikDescription'
         },
         {
           name: 'React state task',
@@ -271,7 +271,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/react_state_task',
           tools: 'HTML, CSS, Javascript, React',
           image: reactState,
-          description: 'Beginners projects for react state management'
+          description: 'stateTaskDescription'
         },
         {
           name: 'Course adversing landing page',
@@ -279,7 +279,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/layout-course-advertising',
           tools: 'HTML, CSS, Bootstrap',
           image: courseAdversting,
-          description: 'Landing page with Bootstrap'
+          description: 'courseDescription'
         },
         {
           name: 'Work with inputs, radio btns, checkboxes and etс.',
@@ -287,7 +287,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/survey_form',
           tools: 'HTML, CSS',
           image: forms,
-          description: 'Learn how to use the forms'
+          description: 'formsDescription'
         },
         {
           name: 'Cutspace landing page.',
@@ -295,7 +295,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/Landing-Cutspace',
           tools: 'HTML, SCSS, Javscript',
           image: cutspace,
-          description: 'Simple landing page build on HTML, SCSS and JS'
+          description: 'cutspaceDescription'
         },
         {
           name: 'Bikсraft landing page.',
@@ -303,7 +303,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/bike-landing',
           tools: 'HTML, CSS',
           image: bike,
-          description: 'Simple landing page build on HTML, SCSS'
+          description: 'bikcraftDescription'
         },
         {
           name: 'Work with inputs, radio btns, checkboxes and etс. Vol.2',
@@ -311,7 +311,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/input-forms',
           tools: 'HTML, CSS',
           image: intakeForms,
-          description: 'Simple landing page build on HTML, SCSS'
+          description: 'forms2Description'
         },
         {
           name: 'ClubWeb landing page.',
@@ -319,7 +319,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/clubweb',
           tools: 'HTML, CSS',
           image: clubweb,
-          description: 'Simple landing page build on HTML, SCSS'
+          description: 'clubWebDescription'
         },
         {
           name: 'Barber landing page.',
@@ -327,7 +327,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/Dupper-Buly',
           tools: 'HTML, CSS, Javascript',
           image: barber,
-          description: 'Simple landing page build on HTML, SCSS and JS with animation'
+          description: 'barberDescription'
         },
         {
           name: 'Trevland landing page.',
@@ -335,7 +335,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/traveland',
           tools: 'HTML, SCSS',
           image: trevland,
-          description: 'Simple landing page build on HTML and SCSS.'
+          description: 'trevlandDescription'
         },
         {
           name: 'Kettles landing page.',
@@ -343,7 +343,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/kettles',
           tools: 'HTML, SCSS, Javascript',
           image: kettles,
-          description: 'Simple landing page build on HTML, SCSS and JS with animation'
+          description: 'kettlesDescription'
         },
         {
           name: 'Accounter landing page.',
@@ -351,7 +351,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/accounter',
           tools: 'HTML, CSS, Javascript',
           image: accounter,
-          description: 'Simple landing page build on HTML, SCSS and JS'
+          description: 'accounterDescription'
         },
         {
           name: 'React task manager.',
@@ -359,7 +359,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/task_manager_usereducer',
           tools: 'HTML, CSS, Javascript, React',
           image: taskManager,
-          description: 'Task Manager built on React and useReducer hooks.'
+          description: 'taskManagerDescription'
         },
         {
           name: 'React forms.',
@@ -367,7 +367,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/react-formic-yup',
           tools: 'HTML, SCSS, Javascript, React',
           image: reactFormic,
-          description: 'Simple form built on React.'
+          description: 'reactFormDescription'
         },
         {
           name: 'JavaScript keyCode',
@@ -375,7 +375,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/keyCode?tab=readme-ov-file',
           tools: 'HTML, SCSS, Javascript',
           image: keyCode,
-          description: 'Press the keypad button and you will see its code.'
+          description: 'keyCodeDescription'
         },
         {
           name: 'Pizza constructor',
@@ -383,7 +383,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/pizza',
           tools: 'HTML, SCSS, Javascript',
           image: pizzaConstructor,
-          description: 'Pizza constructor with drug & drop.'
+          description: 'pizzaDescription'
         },
         {
           name: 'Japan landing page',
@@ -391,7 +391,7 @@ export const myWorkList = () => {
           linkRepo: 'https://github.com/Bilostenko/Japan_landing_page',
           tools: 'HTML, SCSS, Javascript',
           image: japanLanding,
-          description: 'Landing page about Japan.'
+          description: 'japanDescription'
         },
       ]
     }
