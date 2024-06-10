@@ -42,21 +42,19 @@ const Work = () => {
           <span data-i18n="exp" >Exp</span>
           <span data-i18n="erience" className="text-white">erience</span>
         </h2>
-
-      {/* <h2 className="experience__work-header" ref={expRef}><span>Exp</span>erience</h2> */}
       <ul className="experience__work-list">
         {myExperience().work.map((item, index) => (
           <li className="work__list-item" key={index}>
             <div className="work__list-datewraper">
               <p className="work__list-date">{item.date}</p>
-              <p className="work__list-name">{item.name}</p>
+              <p className="education__list-name">{translations[item.name] || item.name}</p>
               <div className="work__list-description">
                 {typeof item.description === 'object' ? (
                   Object.values(item.description).map((value, i) => (
                     <p key={i}>{value}</p>
                   ))
                 ) : (
-                  <p>{item.description}</p>
+                  <p>{translations[item.description] || item.description}</p>
                 )}
               </div>
             </div>

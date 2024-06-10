@@ -102,7 +102,7 @@ const Hero = () => {
               <div ref={descRef} data-i18n="description">
                 {parse(translations[descriptionKey] || descriptionKey)}
               </div>
-              <a href={require("../../assets/CV_Bilostenko.pdf")} download="Bilostenko.pdf">
+              <a href={require("../../assets/CV_Bilostenko.pdf")} download="Bilostenko.pdf" className='link-to-download'>
                 <button className="bn632-hover bn22">
                   <img src={download} alt="Download" />
                   <span data-i18n="resume">{translations['resume'] || 'Resume'}</span>

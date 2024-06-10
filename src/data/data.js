@@ -224,7 +224,7 @@ export const myWorkList = () => {
           description: 'calculatorDescription'
         },
         {
-          name: 'Marvel Characters',
+          name: 'marvelName',
           linkPage: 'https://marvel-character-gamma.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/marvel-character/tree/main',
           tools: 'HTML, SCSS, JavaScript, React, API',
@@ -232,7 +232,7 @@ export const myWorkList = () => {
           description: 'marvelDescription'
         },
         {
-          name: 'Pizza Website',
+          name: 'pizzaName',
           linkPage: 'https://pizza-website-tau.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/pizza-website',
           tools: 'HTML, SCSS, JavaScript',
@@ -240,7 +240,7 @@ export const myWorkList = () => {
           description: 'pizzaDescription'
         },
         {
-          name: 'Chuk Norris Joke Collection',
+          name: 'chukNorrisName',
           linkPage: 'https://bilostenko.github.io/Chuk-Norris-Joke-API/',
           linkRepo: 'https://github.com/Bilostenko/Chuk-Norris-Joke-API',
           tools: 'HTML, SCSS, JavaScript, API',
@@ -248,7 +248,7 @@ export const myWorkList = () => {
           description: 'norrislDescription'
         },
         {
-          name: 'Shopping lannding page',
+          name: 'shoppingName',
           linkPage: 'https://shopping-website-ffq6.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/Shopping-website/tree/master',
           tools: 'HTML, SCSS, JavaScript, React, GSAP',
@@ -258,7 +258,7 @@ export const myWorkList = () => {
       ],
       old: [
         {
-          name: 'Karkik landing page',
+          name: 'karkikName',
           linkPage: 'https://bilostenko.github.io/kartik-bansal-cv/ ',
           linkRepo: 'https://github.com/Bilostenko/kartik-bansal-cv',
           tools: 'HTML, CSS',
@@ -266,7 +266,7 @@ export const myWorkList = () => {
           description: 'karkikDescription'
         },
         {
-          name: 'React state task',
+          name: 'reactStateName',
           linkPage: 'https://react-state-task.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/react_state_task',
           tools: 'HTML, CSS, Javascript, React',
@@ -274,7 +274,7 @@ export const myWorkList = () => {
           description: 'stateTaskDescription'
         },
         {
-          name: 'Course adversing landing page',
+          name: 'courseName',
           linkPage: 'https://bilostenko.github.io/layout-course-advertising/',
           linkRepo: 'https://github.com/Bilostenko/layout-course-advertising',
           tools: 'HTML, CSS, Bootstrap',
@@ -282,7 +282,7 @@ export const myWorkList = () => {
           description: 'courseDescription'
         },
         {
-          name: 'Work with inputs, radio btns, checkboxes and etс.',
+          name: 'formsName',
           linkPage: 'https://bilostenko.github.io/survey_form/ ',
           linkRepo: 'https://github.com/Bilostenko/survey_form',
           tools: 'HTML, CSS',
@@ -290,7 +290,7 @@ export const myWorkList = () => {
           description: 'formsDescription'
         },
         {
-          name: 'Cutspace landing page.',
+          name: 'cutspaceName',
           linkPage: 'https://bilostenko.github.io/Landing-Cutspace/',
           linkRepo: 'https://github.com/Bilostenko/Landing-Cutspace',
           tools: 'HTML, SCSS, Javscript',
@@ -298,7 +298,7 @@ export const myWorkList = () => {
           description: 'cutspaceDescription'
         },
         {
-          name: 'Bikсraft landing page.',
+          name: 'bikcraftName',
           linkPage: 'https://bilostenko.github.io/bike-landing/',
           linkRepo: 'https://github.com/Bilostenko/bike-landing',
           tools: 'HTML, CSS',
@@ -306,7 +306,7 @@ export const myWorkList = () => {
           description: 'bikcraftDescription'
         },
         {
-          name: 'Work with inputs, radio btns, checkboxes and etс. Vol.2',
+          name: 'forms2Name',
           linkPage: 'https://bilostenko.github.io/input-forms/',
           linkRepo: 'https://github.com/Bilostenko/input-forms',
           tools: 'HTML, CSS',
@@ -314,7 +314,7 @@ export const myWorkList = () => {
           description: 'forms2Description'
         },
         {
-          name: 'ClubWeb landing page.',
+          name: 'clubWebName',
           linkPage: 'https://bilostenko.github.io/clubweb/',
           linkRepo: 'https://github.com/Bilostenko/clubweb',
           tools: 'HTML, CSS',
@@ -322,7 +322,7 @@ export const myWorkList = () => {
           description: 'clubWebDescription'
         },
         {
-          name: 'Barber landing page.',
+          name: 'barberName',
           linkPage: 'https://bilostenko.github.io/Dupper-Buly/',
           linkRepo: 'https://github.com/Bilostenko/Dupper-Buly',
           tools: 'HTML, CSS, Javascript',
@@ -330,7 +330,7 @@ export const myWorkList = () => {
           description: 'barberDescription'
         },
         {
-          name: 'Trevland landing page.',
+          name: 'trevlandName',
           linkPage: 'https://bilostenko.github.io/traveland/',
           linkRepo: 'https://github.com/Bilostenko/traveland',
           tools: 'HTML, SCSS',
@@ -338,7 +338,7 @@ export const myWorkList = () => {
           description: 'trevlandDescription'
         },
         {
-          name: 'Kettles landing page.',
+          name: 'kettleName',
           linkPage: 'https://bilostenko.github.io/kettles/',
           linkRepo: 'https://github.com/Bilostenko/kettles',
           tools: 'HTML, SCSS, Javascript',
@@ -346,7 +346,7 @@ export const myWorkList = () => {
           description: 'kettlesDescription'
         },
         {
-          name: 'Accounter landing page.',
+          name: 'accounterName',
           linkPage: 'https://bilostenko.github.io/accounter/',
           linkRepo: 'https://github.com/Bilostenko/accounter',
           tools: 'HTML, CSS, Javascript',
@@ -362,7 +362,7 @@ export const myWorkList = () => {
           description: 'taskManagerDescription'
         },
         {
-          name: 'React forms.',
+          name: 'reactFormName',
           linkPage: 'https://react-formic-yup.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/react-formic-yup',
           tools: 'HTML, SCSS, Javascript, React',
@@ -370,7 +370,7 @@ export const myWorkList = () => {
           description: 'reactFormDescription'
         },
         {
-          name: 'JavaScript keyCode',
+          name: 'keyCodeName',
           linkPage: 'https://bilostenko.github.io/keyCode/',
           linkRepo: 'https://github.com/Bilostenko/keyCode?tab=readme-ov-file',
           tools: 'HTML, SCSS, Javascript',
@@ -378,7 +378,7 @@ export const myWorkList = () => {
           description: 'keyCodeDescription'
         },
         {
-          name: 'Pizza constructor',
+          name: 'pizzaName',
           linkPage: 'https://pizza-sigma-ten.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/pizza',
           tools: 'HTML, SCSS, Javascript',
@@ -386,7 +386,7 @@ export const myWorkList = () => {
           description: 'pizzaDescription'
         },
         {
-          name: 'Japan landing page',
+          name: 'japanName',
           linkPage: 'https://bilostenko.github.io/Japan_landing_page/',
           linkRepo: 'https://github.com/Bilostenko/Japan_landing_page',
           tools: 'HTML, SCSS, Javascript',
@@ -404,29 +404,29 @@ export const myExperience = () => {
     education: [
       {
         date: '2007 - 2011',
-        name: 'National University of Internal Affairs',
+        name: 'university',
         description: {
-          des1: 'Bachelor`s degree in law',
+          des1: 'degree',
         }
       },
       {
         date: '01.11.2022 - 01.05.2023',
-        name: 'IT Generation:',
+        name: 'itGeneration',
         description: {
-          des1: 'Front-End development',
+          des1: 'development',
         }
       },
       {
         date: '',
-        name: 'FreeCodecamp:',
+        name: 'freeCodeCamp',
         description: {
-          des1: 'Responsive Web Design (certificate may be provided upon request)',
-          des2: 'JavaScript Algorithms and Data Structures'
+          des1: 'responsiveWebDesign',
+          des2: 'algorithms'
         }
       },
       {
         date: '',
-        name: 'Prometheus: Основи Web UI розробки 2020',
+        name: 'prometheus',
         description: {
           des1: '',
           des2: ''
@@ -434,27 +434,27 @@ export const myExperience = () => {
       },
       {
         date: '',
-        name: 'Udemy:',
+        name: 'udemy:',
         description: {
-          des1: 'Git: Complete course for beginners and more (certificate may be provided upon request)',
-          des2: 'The Complete JavaScript course + React Course',
-          des3: 'Basic CSS and HTML',
+          des1: 'git',
+          des2: 'jsCourse',
+          des3: 'basicCSS&HTML',
         }
       },
       {
         date: '',
-        name: 'CyberBionic systematics:',
+        name: 'cyberBionic',
         description: {
-          des1: 'course "JavaScript starter" (certificate may be provided upon request)',
-          des2: 'course "JavaScript essential" (certificate may be provided upon request)'
+          des1: 'starterJS',
+          des2: 'essentialJS'
         }
       },
     ],
     work: [
       {
         date: '',
-        name: 'National Police of Ukraine',
-        description: 'Senior inspector in special assigment of the International Police Cooperation Department (Interpol)',
+        name: 'npu',
+        description: 'senior',
       },
     ]
   }

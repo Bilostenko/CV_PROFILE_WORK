@@ -104,18 +104,16 @@
   border: none;
   background-size: 300% 100%;
   border-radius: 50px;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-
 }
+
+.bn632-hover span {
+  text-decoration: none;
+}
+
 
 .bn632-hover:hover {
   background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
@@ -123,12 +121,12 @@
   outline: none;
 }
 
+.link-to-download{
+  text-decoration: none;
+}
+
 .bn632-hover.bn22 {
-  background-image: linear-gradient(to right,
-      #68DF99,
-      #65B56D,
-      #02F243,
-      #52830A);
+  background-image: linear-gradient(to right, #68DF99, #65B56D, #02F243, #52830A);
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }
 

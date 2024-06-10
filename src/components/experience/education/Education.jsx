@@ -10,6 +10,7 @@ const Education = () => {
   const educationRef = useRef(null);
   const educationSectionRef = useRef(null);
   const translations = useSelector(state => state.language.translations);
+  
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -39,25 +40,23 @@ const Education = () => {
 
   return (
     <div className="experience__education" ref={educationSectionRef}>
-
       <h2 className='experience__education-header' ref={educationRef}>
-        <span data-i18n="ed" >Ed</span>
+        <span data-i18n="ed">Ed</span>
         <span data-i18n="ucation" className="text-white">ucation</span>
       </h2>
-      {/* <h2 className="experience__education-header" ref={educationRef}><span>Ed</span>ucation</h2> */}
       <ul className="experience__education-list">
         {myExperience().education.map((item, index) => (
           <li className="education__list-item" key={index}>
             <div className="education__list-datewraper">
               <p className="education__list-date">{item.date}</p>
-              <p className="education__list-name">{item.name}</p>
+              <p className="education__list-name">{translations[item.name] || item.name}</p>
               <div className="education__list-description">
                 {typeof item.description === 'object' ? (
                   Object.values(item.description).map((value, i) => (
-                    <p key={i}>{value}</p>
+                    <p key={i}>{translations[value] || value}</p>
                   ))
                 ) : (
-                  <p>{item.description}</p>
+                  <p>{translations[item.description] || item.description}</p>
                 )}
               </div>
             </div>

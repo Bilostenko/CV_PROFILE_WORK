@@ -46,20 +46,24 @@
   opacity: 0.6;
 }
 
-@media (max-width: 600px) {
-  .lng__btns-wrapper>a {
-    padding: 1em 1em;
-  }
-}
 
-@media (max-width: 500px) {
+@media (max-width: 670px) {
   .lng__btns-wrapper {
     display: flex;
     flex-direction: column;
     gap: 35px;
     justify-content: center;
     align-items: center;
+
+    .lng__btns-wrapper>a {
+      padding: 1em 1em;
+    }
+
   }
+}
+
+@media (max-width: 500px) {
+
 
   .header__wrapper {
     display: flex;

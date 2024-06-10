@@ -58,7 +58,7 @@ const WorkList = () => {
                 {translations['details'] || 'Details...'}
               </Button>
               <Drawer
-                title={`${item.name} (${item.tools})`}
+                title={`${translations[item.name] || item.name} (${item.tools})`}
                 placement="right"
                 closable={false}
                 onClose={onClose}
