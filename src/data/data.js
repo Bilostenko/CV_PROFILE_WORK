@@ -217,8 +217,8 @@ export const myWorkList = () => {
       new: [
         {
           name: 'calculatorName',
-          linkPage: 'https://github.com/Bilostenko/calculator/tree/master',
-          linkRepo: 'https://bilostenko.github.io/calculator/',
+          linkPage: 'https://bilostenko.github.io/calculator/',
+          linkRepo: 'https://github.com/Bilostenko/calculator/tree/master',
           tools: 'HTML, CSS, JavaScript',
           image: calculator,
           description: 'calculatorDescription'
