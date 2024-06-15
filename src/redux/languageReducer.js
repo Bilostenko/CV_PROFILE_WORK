@@ -3,8 +3,8 @@ import ua from '../components/i18n/ua';
 import en from '../components/i18n/eng';
 
 const initialState = {
-  language: 'ua',
-  translations: ua
+  language: 'en',
+  translations: en
 };
 
 const languageReducer = (state = initialState, action) => {

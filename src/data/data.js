@@ -87,7 +87,7 @@ export const social = () => {
     gitHb,
     fb
   }
-}
+} 
 
 export const stats = () => {
 

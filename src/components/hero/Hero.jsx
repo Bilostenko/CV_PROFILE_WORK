@@ -67,7 +67,7 @@ const Hero = () => {
         }
       });
     };
-    
+
     translateElements();
   }, [translations]);
 
@@ -87,8 +87,8 @@ const Hero = () => {
             <div className="hero__social">
               <div className="hero__social_wrapper">
                 <h1 className="hero__name" ref={nameRef} data-i18n="name">
-                {parse(translations[nameKey] || nameKey)}
-                  </h1>
+                  {parse(translations[nameKey] || nameKey)}
+                </h1>
                 <div className="hero__social-list-wrapper">
                   <ul className="hero__social-list">
                     <li className="hero__social-item"><a href={fb.link} target="_blank" rel="noopener noreferrer"><img src={fb.img} alt="facebook" /></a></li>
@@ -98,11 +98,10 @@ const Hero = () => {
                   </ul>
                 </div>
               </div>
-              {/* <div ref={descRef} data-i18n="description">{description}</div> */}
               <div ref={descRef} data-i18n="description">
                 {parse(translations[descriptionKey] || descriptionKey)}
               </div>
-              <a href={require("../../assets/CV_Bilostenko.pdf")} download="Bilostenko.pdf" className='link-to-download'>
+              <a href={require("../../assets/Bilostenko.pdf")} download="Bilostenko.pdf" className='link-to-download'>
                 <button className="bn632-hover bn22">
                   <img src={download} alt="Download" />
                   <span data-i18n="resume">{translations['resume'] || 'Resume'}</span>

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 
-import './text.css';
-
 const Text = () => {
   const [loopCount, setLoopCount] = useState(0);
 
@@ -14,7 +12,7 @@ const Text = () => {
     <div className="typist">
       <Typewriter
         loop
-        words={['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'more other stack...']}
+        words={['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'animations']}
         cursor
         cursorStyle="_"
         typeSpeed={80}

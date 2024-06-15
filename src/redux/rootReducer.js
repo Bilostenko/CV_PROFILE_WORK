@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { projectReducer } from './projectReducer'; // Іменований експорт
+import { projectReducer } from './projectReducer'; 
 import languageReducer from './languageReducer';
 
 const rootReducer = combineReducers({

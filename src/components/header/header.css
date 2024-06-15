@@ -63,7 +63,9 @@
 }
 
 @media (max-width: 500px) {
-
+  .container {
+    padding: 0 17px !important;
+  }
 
   .header__wrapper {
     display: flex;

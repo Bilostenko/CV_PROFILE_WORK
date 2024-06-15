@@ -89,12 +89,12 @@ body {
 
   .about__title {
     padding-top: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 500px) {
   .about__title {
-    padding-top: 20rem !important;
+    padding-top: 273px !important;
   }
 }
