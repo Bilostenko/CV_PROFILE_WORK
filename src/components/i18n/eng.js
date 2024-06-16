@@ -2,7 +2,6 @@ export default {
   "my": "My",
   "cv": "CV",
   "description": "I`m a hard-working <strong class='text-white'>software developer</strong> who looks forward to working with an open-minded team of individuals",
-  "resume": "Resume",
   "name": "Dmytro BILOSTENKO",
   "achievement1": "I have confirmed CSS skills on LinkedIn",
   "achievement2": "Certification from Freecodecamp course on `Responsive Web Design` and `JavaScript Algorithms and Data Structures`, certification of completion of CyberBionic systematics school and IT Generation",

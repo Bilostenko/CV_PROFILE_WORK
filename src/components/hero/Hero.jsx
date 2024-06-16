@@ -13,7 +13,7 @@ const Hero = () => {
 
   const translations = useSelector(state => state.language.translations);
   const { workPlaceImg, nameKey, descriptionKey } = herodescription();
-  const { inst, lnkdn, gitHb, fb } = social();
+  const { lnkdn, gitHb } = social();
   const nameRef = useRef(null);
   const descRef = useRef(null);
   const leftBlockRef = useRef(null);
@@ -91,8 +91,6 @@ const Hero = () => {
                 </h1>
                 <div className="hero__social-list-wrapper">
                   <ul className="hero__social-list">
-                    <li className="hero__social-item"><a href={fb.link} target="_blank" rel="noopener noreferrer"><img src={fb.img} alt="facebook" /></a></li>
-                    <li className="hero__social-item"><a href={inst.link} target="_blank" rel="noopener noreferrer"><img src={inst.img} alt="instagram" /></a></li>
                     <li className="hero__social-item"><a href={lnkdn.link} target="_blank" rel="noopener noreferrer"><img src={lnkdn.img} alt="linkedin" /></a></li>
                     <li className="hero__social-item"><a href={gitHb.link} target="_blank" rel="noopener noreferrer"><img src={gitHb.img} alt="github" /></a></li>
                   </ul>
@@ -101,12 +99,6 @@ const Hero = () => {
               <div ref={descRef} data-i18n="description">
                 {parse(translations[descriptionKey] || descriptionKey)}
               </div>
-              <a href={require("../../assets/Bilostenko.pdf")} download="Bilostenko.pdf" className='link-to-download'>
-                <button className="bn632-hover bn22">
-                  <img src={download} alt="Download" />
-                  <span data-i18n="resume">{translations['resume'] || 'Resume'}</span>
-                </button>
-              </a>
             </div>
           </div>
         </div>
