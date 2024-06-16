@@ -396,13 +396,7 @@ export const myExperience = () => {
 
   return {
     education: [
-      {
-        date: '2007 - 2011',
-        name: 'university',
-        description: {
-          des1: 'degree',
-        }
-      },
+     
       {
         date: '01.11.2022 - 01.05.2023',
         name: 'itGeneration',
@@ -444,12 +438,6 @@ export const myExperience = () => {
         }
       },
     ],
-    work: [
-      {
-        date: '',
-        name: 'npu',
-        description: 'senior',
-      },
-    ]
+   
   }
 }
