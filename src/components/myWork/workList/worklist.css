@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 7px; /* Залишаємо тільки зовнішні відступи */
   padding: 10px 10px 100px 10px;
 }
 
@@ -61,7 +61,12 @@
 }
 
 @media (max-width: 500px) {
-  .work__list {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  .work__item {
+    max-width: 23rem;
+  }
+}
+@media (max-width: 410px) {
+  .work__item {
+    max-width: 18rem !important;
   }
 }
