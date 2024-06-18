@@ -18,7 +18,7 @@ export default {
   "erience": "свід",
   "ed": "Ос",
   "ucation": "віта",
-  "certificates" : "Сертифікати (наведи на знак питання)",
+  "certificates" : "Сертифікати (натисни на знак питання)",
   "repos": "Репозиторії на GitHub",
   "scores": "Статистика на Codewars",
   "ranks": "Ранг: ",

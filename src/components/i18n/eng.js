@@ -19,7 +19,7 @@ export default {
   "erience": "erience",
   "ed": "Ed",
   "ucation": "ucation",
-  "certificates" : "Certificates (point to the question mark)",
+  "certificates" : "Certificates (click on the question mark)",
   "repos": "Repos on GitHub",
   "scores": "Score on Codewars",
   "ranks": "Rank: ",

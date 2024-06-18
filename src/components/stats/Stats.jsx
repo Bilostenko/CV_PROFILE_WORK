@@ -7,9 +7,10 @@ import gsap from 'gsap';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Spinner from '../spinner/Spinner';
 import question from '../../assets/icons/question.png'
-import { Tooltip } from 'antd';
 import Certificates from './certificate/Certificate';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { Modal } from 'antd';
 const Stats = () => {
 
   const statsData = stats();
@@ -29,6 +30,20 @@ const Stats = () => {
   const certificatesNumberRef = useRef(null);
   const gitHubCountRef = useRef(null);
   const codeWarsCountRef = useRef(null);
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
   useEffect(() => {
     updateGitHubRepos()
@@ -187,51 +202,47 @@ const Stats = () => {
     <section className="stats">
       <div className="container">
         <h2 className='stats__title' ref={statsRef}>
-          <span data-i18n="sta" >Sta</span>
+          <span data-i18n="sta">Sta</span>
           <span data-i18n="ts" className="text-white">ts</span>
         </h2>
         <div className="stats__wrapper">
           <div className="stats__item" ref={statsBox1Ref}>
-            <div className="stats__item-logo" >
+            <div className="stats__item-logo">
               <img src={statsData.certificate} alt="logo" />
             </div>
             <h3 className="stats__number" data-i18n="certificates">{statsData.statsList.certificate}</h3>
-            <Tooltip
-              className='tooltip'
-              placement="right"
-              title={<Certificates
-              />}>
-              <img src={question} alt="icon" ref={questionIconRef} />
-            </Tooltip>
+            <img src={question} alt="icon" ref={questionIconRef} onClick={showModal} />
+            <Modal
+              title="Certificates"
+              visible={isModalVisible}
+              onOk={handleOk}
+              onCancel={handleCancel}
+              centered
+              width="80vw"
+            >
+              <Certificates />
+            </Modal>
             <p className="stats__text" ref={certificatesNumberRef}>0</p>
           </div>
           <div className="stats__item" ref={statsBox2Ref}>
-            <div className="stats__item-logo" >
+            <div className="stats__item-logo">
               <img src={statsData.gitHubStats} alt="logo" />
             </div>
             <h3 className="stats__number" data-i18n="repos">{statsData.statsList.repo}</h3>
-            <p className="stats__text" ref={gitHubCountRef}>
-              {/* {errorMessage}
-              {spinner}
-              {gitHubCount ? gitHubCount.length : 'Loading...'} */}
-              0
-            </p>
+            <p className="stats__text" ref={gitHubCountRef}>0</p>
           </div>
           <div className="stats__item" ref={statsBox3Ref}>
-            <div className="stats__item-logo" >
+            <div className="stats__item-logo">
               <img src={statsData.codeWarsStats} alt="logo" />
             </div>
             <h3 className="stats__number" data-i18n="scores">{statsData.statsList.score}</h3>
-            <p className="stats__text" ref={codeWarsCountRef}>
-              {/* {errorMessage}
-              {spinner}
-              {typeof codewarsCountScore === 'number' ? codewarsCountScore : (spinner)} */}
-              0
-            </p>
-            <p className="stats__rank" data-i18n="ranks">{statsData.statsList.rankі}
+            <p className="stats__text" ref={codeWarsCountRef}>0</p>
+            <p className="stats__rank" data-i18n="ranks">
+              {statsData.statsList.rankі}
               {errorMessage}
               {spinner}
-              {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}</p>
+              {typeof codewarsCountRank === 'string' ? codewarsCountRank : (spinner)}
+            </p>
           </div>
         </div>
       </div>
