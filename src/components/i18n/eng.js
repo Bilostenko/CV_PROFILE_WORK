@@ -34,7 +34,6 @@ export default {
   'calculatorDescription': 'Calculator written in Javascript',
   'marvelDescription': 'Find your marvel hero and check his biography.',
   'pizzaDescription': 'Just Javascript and nothing else =) Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.',
-  'norrislDescription': 'Welcome to the Chuck Norris Joke Collection! Press the button and brace yourself for a laugh harder than Chuck`s roundhouse kick.',
   'shoppingDescription': 'Simple landing page build on React and GSAP animation library.',
   'karkikDescription': 'Simple landing page. Just JS and CSS.',
   'stateTaskDescription': 'Beginners projects for react state management',

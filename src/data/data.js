@@ -234,14 +234,6 @@ export const myWorkList = () => {
           description: 'pizzaDescription'
         },
         {
-          name: 'chukNorrisName',
-          linkPage: 'https://bilostenko.github.io/Chuk-Norris-Joke-API/',
-          linkRepo: 'https://github.com/Bilostenko/Chuk-Norris-Joke-API',
-          tools: 'HTML, SCSS, JavaScript, API',
-          image: chuk,
-          description: 'norrislDescription'
-        },
-        {
           name: 'shoppingName',
           linkPage: 'https://shopping-website-ffq6.vercel.app/',
           linkRepo: 'https://github.com/Bilostenko/Shopping-website/tree/master',
