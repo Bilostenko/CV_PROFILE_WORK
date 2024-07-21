@@ -6,6 +6,7 @@ export default {
   "achievement1": "Я маю підтвердженні навички CSS на LinkedIn",
   "achievement2": "Сертифікація з курсу Freecodecamp `Responsive Web Design` і `JavaScript Algorithms and Data Structures`, сертифікація завершення школи CyberBionic systematics і програми IT Generation",
   "achievement3": "4 kyu Rank на CodeWars з більш ніж 600 завершеними завданнями в JavaScript",
+  "achievement4": "Маю досвід роботи з такими технологічними стеками, як React, Redux, Javascript, HTML, CSS, SCSS, GIT, REST API, Figma, Photoshop, Antdesign, GSAP (анімація).",
   "abo": "Про",
   "utme": " мене",
   "sta": "Стати",

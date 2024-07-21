@@ -61,7 +61,8 @@ export const herodescription = () => {
   const achievementList = { 
     item1: "achievement1", 
     item2: "achievement2", 
-    item3: "achievement3"
+    item3: "achievement3",
+    item4: "achievement4"
   }
 
   return {

@@ -76,10 +76,11 @@ const About = () => {
         </h2>
         <div className="about__wrapper" ref={containerRef}>
           <div className="about__description" ref={leftBlockRef}>
-            <ul className="about__description-list" ref={listRef}>
-              <li className="about__desctiption-item" data-i18n="achievement1">{herodescriptionData.achievementList.item1}</li>
+          <ul className="about__description-list" ref={listRef}>
+              <li className="about__desctiption-item" data-i18n="achievement4">{herodescriptionData.achievementList.item4}</li>
               <li className="about__desctiption-item" data-i18n="achievement2">{herodescriptionData.achievementList.item2}</li>
               <li className="about__desctiption-item" data-i18n="achievement3">{herodescriptionData.achievementList.item3}</li>
+              <li className="about__desctiption-item" data-i18n="achievement1">{herodescriptionData.achievementList.item1}</li>
             </ul>
           </div>
           <div className="about__photo" ref={rightBlockRef}>
