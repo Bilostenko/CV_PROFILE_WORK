@@ -391,7 +391,7 @@ export const myExperience = () => {
     education: [
      
       {
-        date: '01.11.2022 - 01.05.2023',
+        date: '',
         name: 'itGeneration',
         description: {
           des1: 'development',
