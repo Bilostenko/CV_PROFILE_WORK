@@ -33,6 +33,7 @@ export default {
   "linkToRepo": "Link to Repo",
   // PROJECT DESCRIPTIONS
   'calculatorDescription': 'Calculator written in Javascript',
+  'typescriptPizzaFormDescription' : 'Pizza Manager is a React and TypeScript application that allows users to add, edit, and delete pizza entries.',
   'marvelDescription': 'Find your marvel hero and check his biography.',
   'pizzaDescription': 'Just Javascript and nothing else =) Test functionality: add and remove pizza order, drag and drop, change the language, validation inputs in cart and etc.',
   'shoppingDescription': 'Simple landing page build on React and GSAP animation library.',
@@ -54,6 +55,7 @@ export default {
   'pizzaDescription': 'Pizza constructor with drug & drop.',
   'japanDescription': 'Landing page about Japan.',
   // PROJECT NAMES
+  'typescriptPizzaForm':'Typescript Pizza Form',
   'calculatorName': 'Calculator',
   'marvelName': 'Marvel Characters',
   'pizzaName': 'Pizza Website',

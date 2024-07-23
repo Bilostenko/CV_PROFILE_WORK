@@ -31,6 +31,7 @@ export default {
   "linkToPage": "Посилання на сторінку",
   "linkToRepo": "Посилання на репозиторій",
    // PROJECT DESCRIPTIONS
+   'typescriptPizzaFormDescription' : 'React та TypeScript додаток, який дозволяє користувачам додавати, редагувати та видаляти записи про піцу.',
   'calculatorDescription': 'Калькулятор написаний на Javascript',
   'marvelDescription': 'Знайди свого героя Марвел та перевір його біографію.',
   'pizzaDescription': "Тільки Javascript і нічого більше =) Протестуйте функціонал: додавання та видалення замовлення піци, перетягування, зміна мови, валідація вводу в кошику і т.д.",
@@ -53,6 +54,7 @@ export default {
   'pizzaDescription': 'Конструктор піци з drug & drop.',
   'japanDescription': 'Лендінг про Японію.',
    // PROJECT NAMES
+   'typescriptPizzaForm':'Typescript форма замовення піци',
   'calculatorName': 'Калькулятор',
   'marvelName': 'Персонажі Marvel',
   'pizzaName': 'Сайт замовлення Pizza',

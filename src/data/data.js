@@ -31,9 +31,9 @@ import sassIcon from '../assets/icons/sass-icon.png';
 
 // WORKLIST
 import calculator from '../assets/image/worklist/calculator.png';
+import typescriptPizzaForm from '../assets/image/worklist/typescriptPizzaForm.png';
 import marvel from '../assets/image/worklist/marvel.png';
 import pizza from '../assets/image/worklist/pizza.png';
-import chuk from '../assets/image/worklist/chuk_norris.png';
 import shopping from '../assets/image/worklist/shopping.png';
 import katrik from '../assets/image/worklist/katrik.png';
 import reactState from '../assets/image/worklist/react-state.png';
@@ -58,9 +58,9 @@ export const herodescription = () => {
   const personalPhotoImg = personalPhoto;
   const nameKey = 'name';
   const descriptionKey = 'description';
-  const achievementList = { 
-    item1: "achievement1", 
-    item2: "achievement2", 
+  const achievementList = {
+    item1: "achievement1",
+    item2: "achievement2",
     item3: "achievement3",
     item4: "achievement4"
   }
@@ -82,7 +82,7 @@ export const social = () => {
     lnkdn,
     gitHb,
   }
-} 
+}
 
 export const stats = () => {
 
@@ -90,7 +90,7 @@ export const stats = () => {
   const codeWarsStats = codeWars;
   const certificate = certificates;
 
-  const statsList = { 
+  const statsList = {
     certificate: "сertificates",
     repo: "repos",
     score: "scores",
@@ -245,6 +245,14 @@ export const myWorkList = () => {
       ],
       old: [
         {
+          name: 'typescriptPizzaForm',
+          linkPage: 'https://react-typescript-pizza-form.vercel.app/',
+          linkRepo: 'https://github.com/Bilostenko/React-Typescript-PIZZA-FORM',
+          tools: 'JavaScript, Typescript, React, HTML, CSS, ',
+          image: typescriptPizzaForm,
+          description: 'typescriptPizzaFormDescription'
+        },
+        {
           name: 'karkikName',
           linkPage: 'https://bilostenko.github.io/kartik-bansal-cv/ ',
           linkRepo: 'https://github.com/Bilostenko/kartik-bansal-cv',
@@ -389,7 +397,7 @@ export const myExperience = () => {
 
   return {
     education: [
-     
+
       {
         date: '',
         name: 'itGeneration',
@@ -431,6 +439,6 @@ export const myExperience = () => {
         }
       },
     ],
-   
+
   }
 }
